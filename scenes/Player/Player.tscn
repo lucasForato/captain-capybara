@@ -1,24 +1,13 @@
-[gd_scene load_steps=4 format=3 uid="uid://td6bujpmvvfh"]
+[gd_scene load_steps=3 format=3 uid="uid://807eo0o5qysf"]
 
 [ext_resource type="Script" path="res://scenes/Player/Player.gd" id="1_qedrl"]
-[ext_resource type="Texture2D" uid="uid://dmu2v1cu1e64b" path="res://art/player/player.png" id="2_fqtg3"]
+[ext_resource type="Texture2D" uid="uid://dmu2v1cu1e64b" path="res://art/player/player.png" id="2_w0w6n"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_8f68l"]
-size = Vector2(14, 14)
-
-[node name="Player" type="CharacterBody2D"]
-disable_mode = 1
-collision_mask = 2
-slide_on_ceiling = false
-floor_constant_speed = true
+[node name="Player" type="Node2D"]
 script = ExtResource("1_qedrl")
-speed = 50
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-show_behind_parent = true
-shape = SubResource("RectangleShape2D_8f68l")
-one_way_collision_margin = 0.0
-
-[node name="Player" type="Sprite2D" parent="."]
+[node name="Sprite2D" type="Sprite2D" parent="."]
+z_index = 2
 texture_filter = 1
-texture = ExtResource("2_fqtg3")
+position = Vector2(8, 8)
+texture = ExtResource("2_w0w6n")

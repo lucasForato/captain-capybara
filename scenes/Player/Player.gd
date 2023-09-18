@@ -1,22 +1,17 @@
-extends CharacterBody2D
+extends 'res://scripts/Pawn.gd'
 
 
-@export var speed = 20
+@onready var Grid = get_parent()
 
-
-func _process(delta):
-	var velocity: Vector2 = Vector2.ZERO
-
-	if Input.is_action_pressed("move_up"):
-		velocity.y -= speed
+func _input(event: InputEvent):
+	var event_name: String
+	if event.is_action_pressed("move_down"):
+		event_name = "move_down"
+	if event.is_action_pressed("move_up"):
+		event_name = "move_up"
+	if event.is_action_pressed("move_left"):
+		event_name = "move_left"
+	if event.is_action_pressed("move_right"):
+		event_name = "move_right"
 	
-	if Input.is_action_pressed("move_down"):
-		velocity.y += speed
-	
-	if Input.is_action_pressed("move_left"):
-		velocity.x -= speed
-	
-	if Input.is_action_pressed("move_right"):
-		velocity.x += speed
-	
-	move_and_collide(velocity * delta)
+	Grid.request_move(self, event_name)

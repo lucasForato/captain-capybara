@@ -1,0 +1,4 @@
+extends Node2D
+
+enum CELL_TYPE {FLOOR, PLAYER, WALL, INVISIBLE_WALL, PORTAL}
+@export var type: CELL_TYPE

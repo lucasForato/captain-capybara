@@ -1,17 +1,15 @@
 [gd_scene load_steps=3 format=3 uid="uid://c3jc76qxd78qj"]
 
-[ext_resource type="PackedScene" uid="uid://td6bujpmvvfh" path="res://scenes/Player/Player.tscn" id="1_foxic"]
-[ext_resource type="PackedScene" uid="uid://bpldadfipxkca" path="res://scenes/Map/Map.tscn" id="2_vp6t1"]
+[ext_resource type="PackedScene" uid="uid://807eo0o5qysf" path="res://scenes/Player/Player.tscn" id="1_foxic"]
+[ext_resource type="PackedScene" uid="uid://cwcsie0ucsoe" path="res://scenes/Grid/Grid.tscn" id="1_k37au"]
 
 [node name="Main" type="Node2D"]
 position = Vector2(1, 2)
 
-[node name="Player" parent="." instance=ExtResource("1_foxic")]
-z_index = 5
+[node name="Grid" parent="." instance=ExtResource("1_k37au")]
 texture_filter = 1
-position = Vector2(87, 102)
 
-[node name="Map" parent="." instance=ExtResource("2_vp6t1")]
-texture_filter = 1
-position = Vector2(-1, -2)
-cell_quadrant_size = 1
+[node name="Player" parent="Grid" instance=ExtResource("1_foxic")]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(72, 72)
