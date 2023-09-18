@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://g46gy4vsnwym"]
+
+[ext_resource type="PackedScene" uid="uid://cwcsie0ucsoe" path="res://scenes/Grid/Grid.tscn" id="1_wwwxl"]
+[ext_resource type="PackedScene" uid="uid://807eo0o5qysf" path="res://scenes/Player/Player.tscn" id="2_htsff"]
+
+[node name="LevelOne" type="Node2D"]
+
+[node name="Grid" parent="." instance=ExtResource("1_wwwxl")]
+
+[node name="Player" parent="Grid" instance=ExtResource("2_htsff")]
+position = Vector2(1, 3)
