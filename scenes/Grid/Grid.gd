@@ -20,6 +20,8 @@ func is_camera_right() -> bool:
 	return orientation == CAMERA_ORIENTATION.RIGHT
 
 
+@onready var camera = get_parent()
+
 func _ready():
 	for child in get_children():
 		set_cell(1, local_to_map(child.position), child.type, Vector2i(0, 0))
