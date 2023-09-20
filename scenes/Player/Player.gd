@@ -17,5 +17,4 @@ func _input(event: InputEvent):
 		var can_move = Grid.request_move(self, event_name)
 		if not can_move:
 			return
-		print(can_move)
 		Grid.move(self, event_name)

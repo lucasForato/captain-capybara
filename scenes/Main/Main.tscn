@@ -8,4 +8,6 @@ position = Vector2(33, -14)
 [node name="LevelOne" parent="." instance=ExtResource("1_phqy2")]
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(48, 48)
+position = Vector2(8, 25)
+rotation = 3.14159
+ignore_rotation = false

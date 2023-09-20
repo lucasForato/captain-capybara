@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://b0l40saiq4kxp"]
+
+[ext_resource type="Script" path="res://scenes/Crate/Crate.gd" id="1_b2i0m"]
+[ext_resource type="Texture2D" uid="uid://c5t1cnvo8dw5x" path="res://art/crate/crate.png" id="2_hj2mk"]
+
+[node name="Create" type="Node2D"]
+script = ExtResource("1_b2i0m")
+type = 4
+
+[node name="Crate" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(8, 8)
+texture = ExtResource("2_hj2mk")

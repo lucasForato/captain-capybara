@@ -1,6 +1,6 @@
 extends Node2D
 
-enum CELL_TYPE {PLAYER, WALL, INVISIBLE_WALL, PORTAL}
+enum CELL_TYPE {PLAYER, WALL, INVISIBLE_WALL, PORTAL, CRATE}
 @export var type: CELL_TYPE
 
 func is_player() -> bool:
