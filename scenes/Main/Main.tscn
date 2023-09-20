@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://c3jc76qxd78qj"]
+[gd_scene load_steps=3 format=3 uid="uid://c3jc76qxd78qj"]
 
 [ext_resource type="PackedScene" uid="uid://g46gy4vsnwym" path="res://levels/Level1/LevelOne.tscn" id="1_phqy2"]
+[ext_resource type="PackedScene" uid="uid://cb6e0f3g7euiy" path="res://scenes/Camera/Camera.tscn" id="2_lnlp7"]
 
 [node name="Main" type="Node2D"]
 position = Vector2(33, -14)

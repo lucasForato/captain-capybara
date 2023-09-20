@@ -21,6 +21,10 @@ window/size/viewport_width=160
 window/size/viewport_height=144
 window/stretch/mode="viewport"
 
+[dotnet]
+
+project/assembly_name="captain_capybara"
+
 [input]
 
 move_up={
