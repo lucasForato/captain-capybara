@@ -1,11 +1,12 @@
 extends TileMap
 
+@onready var Camera = get_parent().get_parent()
+
 enum CELL_TYPE {PLAYER, WALL, INVISIBLE_WALL, PORTAL, CRATE}
-
 # the orientation tells us which side of the camera is facing up
-enum CAMERA_ORIENTATION {UP, DOWN, LEFT, RIGHT}
+enum CAMERA_ORIENTATION {UP, RIGHT, DOWN, LEFT}
 
-var orientation = CAMERA_ORIENTATION.LEFT
+var orientation = CAMERA_ORIENTATION.UP
 
 func is_camera_up() -> bool:
 	return orientation == CAMERA_ORIENTATION.UP
@@ -19,10 +20,8 @@ func is_camera_left() -> bool:
 func is_camera_right() -> bool:
 	return orientation == CAMERA_ORIENTATION.RIGHT
 
-
-@onready var camera = get_parent()
-
 func _ready():
+	Camera.connect('change_orientation', Callable(self, "_rotate"))
 	for child in get_children():
 		set_cell(1, local_to_map(child.position), child.type, Vector2i(0, 0))
 
@@ -52,27 +51,18 @@ func request_move(pawn, direction) -> bool:
 	else:
 		return false
 
+func _rotate(camera_orientation: CAMERA_ORIENTATION) -> void:
+	print('UP IS: ', CAMERA_ORIENTATION.UP)
+	print('RIGHT IS: ', CAMERA_ORIENTATION.RIGHT)
+	print('DOWN IS: ', CAMERA_ORIENTATION.DOWN)
+	print('LEFT IS: ', CAMERA_ORIENTATION.LEFT)
+	
+	print(orientation)	
+	orientation = camera_orientation
+	
 		
 func get_target_position(pawn, direction) -> Vector2:
 	var target = pawn.position
-	if direction == 'move_right':
-		if is_camera_up():
-			target.x += 16
-		if is_camera_down():
-			target.x -= 16
-		if is_camera_left():
-			target.y -= 16
-		if is_camera_right():
-			target.y += 16
-	if direction == 'move_left':
-		if is_camera_up():
-			target.x -= 16
-		if is_camera_down():
-			target.x += 16
-		if is_camera_left():
-			target.y += 16
-		if is_camera_right():
-			target.y -= 16
 	if direction == 'move_up':
 		if is_camera_up():
 			target.y -= 16
@@ -82,6 +72,15 @@ func get_target_position(pawn, direction) -> Vector2:
 			target.x += 16
 		if is_camera_right():
 			target.x -= 16
+	if direction == 'move_right':
+		if is_camera_up():
+			target.x += 16
+		if is_camera_down():
+			target.x -= 16
+		if is_camera_left():
+			target.y += 16
+		if is_camera_right():
+			target.y -= 16
 	if direction == 'move_down':
 		if is_camera_up():
 			target.y += 16
@@ -91,6 +90,16 @@ func get_target_position(pawn, direction) -> Vector2:
 			target.x -= 16
 		if is_camera_right():
 			target.x += 16
+	if direction == 'move_left':
+		if is_camera_up():
+			target.x -= 16
+		if is_camera_down():
+			target.x += 16
+		if is_camera_left():
+			target.y -= 16
+		if is_camera_right():
+			target.y += 16
+	
 	return target
 
 

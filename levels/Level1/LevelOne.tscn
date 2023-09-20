@@ -196,6 +196,14 @@ type = 1
 position = Vector2(80, -48)
 type = 1
 
+[node name="Wall88" parent="Grid" instance=ExtResource("3_avdol")]
+position = Vector2(-80, -64)
+type = 1
+
+[node name="Wall90" parent="Grid" instance=ExtResource("3_avdol")]
+position = Vector2(80, -48)
+type = 1
+
 [node name="Wall2" parent="Grid" instance=ExtResource("3_avdol")]
 position = Vector2(-48, -48)
 type = 1
@@ -367,7 +375,7 @@ type = 1
 position = Vector2(-64, 0)
 type = 1
 
-[node name="Create" parent="Grid" instance=ExtResource("4_8jlf3")]
+[node name="Crate" parent="Grid" instance=ExtResource("4_8jlf3")]
 z_index = 2
 position = Vector2(64, -16)
 
