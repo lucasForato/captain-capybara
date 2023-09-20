@@ -3,9 +3,9 @@
 [ext_resource type="PackedScene" uid="uid://g46gy4vsnwym" path="res://levels/Level1/LevelOne.tscn" id="1_phqy2"]
 
 [node name="Main" type="Node2D"]
-position = Vector2(1, 2)
-
-[node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(72, 72)
+position = Vector2(33, -14)
 
 [node name="LevelOne" parent="." instance=ExtResource("1_phqy2")]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(48, 48)

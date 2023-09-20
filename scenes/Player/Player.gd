@@ -13,4 +13,9 @@ func _input(event: InputEvent):
 	if event.is_action_pressed("move_right"):
 		event_name = "move_right"
 	
-	Grid.request_move(self, event_name)
+	if event_name:
+		var can_move = Grid.request_move(self, event_name)
+		if not can_move:
+			return
+		print(can_move)
+		Grid.move(self, event_name)
