@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://bn7gdpt3bdqpj"]
+
+[ext_resource type="Texture2D" uid="uid://dababjgpskw5m" path="res://art/gate/gate.png" id="1_1adgu"]
+[ext_resource type="Script" path="res://scenes/Gate/Gate.gd" id="1_evrsm"]
+
+[node name="Gate" type="Node2D"]
+script = ExtResource("1_evrsm")
+type = 2
+
+[node name="Gate" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(8, 8)
+texture = ExtResource("1_1adgu")

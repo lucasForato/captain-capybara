@@ -1,12 +1,11 @@
-[gd_scene load_steps=8 format=3 uid="uid://g46gy4vsnwym"]
+[gd_scene load_steps=7 format=3 uid="uid://g46gy4vsnwym"]
 
 [ext_resource type="PackedScene" uid="uid://cwcsie0ucsoe" path="res://scenes/Grid/Grid.tscn" id="1_wwwxl"]
 [ext_resource type="PackedScene" uid="uid://807eo0o5qysf" path="res://scenes/Player/Player.tscn" id="2_htsff"]
 [ext_resource type="PackedScene" uid="uid://dt8trl1rm2rev" path="res://scenes/Wall/Wall.tscn" id="3_avdol"]
 [ext_resource type="PackedScene" uid="uid://b0l40saiq4kxp" path="res://scenes/Crate/Crate.tscn" id="4_8jlf3"]
 [ext_resource type="PackedScene" uid="uid://5715rk80ob1j" path="res://scenes/Exit/Exit.tscn" id="5_biojs"]
-[ext_resource type="PackedScene" uid="uid://il3tijkbfr2" path="res://scenes/Bomb/Bomb.tscn" id="6_cwadg"]
-[ext_resource type="PackedScene" uid="uid://j3rbfgoj6oi7" path="res://scenes/CrackedWall/CrackedWall.tscn" id="7_f4qrm"]
+[ext_resource type="PackedScene" uid="uid://il3tijkbfr2" path="res://scenes/Bomb/Bomb.tscn" id="6_kke1k"]
 
 [node name="LevelOne" type="Node2D"]
 position = Vector2(0, 1)
@@ -18,358 +17,275 @@ layer_1/z_index = 1
 
 [node name="Player" parent="Grid" instance=ExtResource("2_htsff")]
 position = Vector2(-64, -32)
-type = 0
 
 [node name="Wall" parent="Grid" instance=ExtResource("3_avdol")]
 position = Vector2(-64, -48)
-type = 1
 
 [node name="Wall11" parent="Grid" instance=ExtResource("3_avdol")]
 position = Vector2(-80, -64)
-type = 1
 
 [node name="Wall12" parent="Grid" instance=ExtResource("3_avdol")]
 position = Vector2(-80, -48)
-type = 1
 
 [node name="Wall13" parent="Grid" instance=ExtResource("3_avdol")]
 position = Vector2(-80, -32)
-type = 1
 
 [node name="Wall14" parent="Grid" instance=ExtResource("3_avdol")]
 position = Vector2(-80, -16)
-type = 1
 
 [node name="Wall15" parent="Grid" instance=ExtResource("3_avdol")]
 position = Vector2(-80, 0)
-type = 1
 
 [node name="Wall16" parent="Grid" instance=ExtResource("3_avdol")]
 position = Vector2(-80, 16)
-type = 1
 
 [node name="Wall17" parent="Grid" instance=ExtResource("3_avdol")]
 position = Vector2(-80, 32)
-type = 1
 
 [node name="Wall18" parent="Grid" instance=ExtResource("3_avdol")]
 position = Vector2(-80, 48)
-type = 1
 
 [node name="Wall19" parent="Grid" instance=ExtResource("3_avdol")]
 position = Vector2(-80, 64)
-type = 1
 
 [node name="Wall20" parent="Grid" instance=ExtResource("3_avdol")]
 position = Vector2(-80, 80)
-type = 1
 
 [node name="Wall21" parent="Grid" instance=ExtResource("3_avdol")]
 position = Vector2(-80, 96)
-type = 1
 
 [node name="Wall22" parent="Grid" instance=ExtResource("3_avdol")]
 position = Vector2(-64, 96)
-type = 1
 
 [node name="Wall23" parent="Grid" instance=ExtResource("3_avdol")]
 position = Vector2(-48, 96)
-type = 1
 
 [node name="Wall24" parent="Grid" instance=ExtResource("3_avdol")]
 position = Vector2(-32, 96)
-type = 1
 
 [node name="Wall25" parent="Grid" instance=ExtResource("3_avdol")]
 position = Vector2(-16, 96)
-type = 1
 
 [node name="Wall26" parent="Grid" instance=ExtResource("3_avdol")]
 position = Vector2(0, 96)
-type = 1
 
 [node name="Wall27" parent="Grid" instance=ExtResource("3_avdol")]
 position = Vector2(16, 96)
-type = 1
 
 [node name="Wall28" parent="Grid" instance=ExtResource("3_avdol")]
 position = Vector2(32, 96)
-type = 1
 
 [node name="Wall29" parent="Grid" instance=ExtResource("3_avdol")]
 position = Vector2(48, 96)
-type = 1
 
 [node name="Wall30" parent="Grid" instance=ExtResource("3_avdol")]
 position = Vector2(64, 96)
-type = 1
 
 [node name="Wall70" parent="Grid" instance=ExtResource("3_avdol")]
 position = Vector2(-64, 80)
-type = 1
 
 [node name="Wall71" parent="Grid" instance=ExtResource("3_avdol")]
 position = Vector2(-48, 80)
-type = 1
 
 [node name="Wall72" parent="Grid" instance=ExtResource("3_avdol")]
 position = Vector2(-32, 80)
-type = 1
 
 [node name="Wall73" parent="Grid" instance=ExtResource("3_avdol")]
 position = Vector2(-16, 80)
-type = 1
 
 [node name="Wall74" parent="Grid" instance=ExtResource("3_avdol")]
 position = Vector2(0, 80)
-type = 1
 
 [node name="Wall75" parent="Grid" instance=ExtResource("3_avdol")]
 position = Vector2(16, 80)
-type = 1
 
 [node name="Wall76" parent="Grid" instance=ExtResource("3_avdol")]
 position = Vector2(32, 80)
-type = 1
+
+[node name="Wall77" parent="Grid" instance=ExtResource("3_avdol")]
+position = Vector2(48, 80)
 
 [node name="Wall78" parent="Grid" instance=ExtResource("3_avdol")]
 position = Vector2(64, 80)
-type = 1
+
+[node name="Wall94" parent="Grid" instance=ExtResource("3_avdol")]
+position = Vector2(64, 64)
 
 [node name="Wall31" parent="Grid" instance=ExtResource("3_avdol")]
 position = Vector2(80, 96)
-type = 1
 
 [node name="Wall32" parent="Grid" instance=ExtResource("3_avdol")]
 position = Vector2(80, 80)
-type = 1
 
 [node name="Wall33" parent="Grid" instance=ExtResource("3_avdol")]
 position = Vector2(80, 64)
-type = 1
 
 [node name="Wall34" parent="Grid" instance=ExtResource("3_avdol")]
 position = Vector2(80, 48)
-type = 1
 
 [node name="Wall35" parent="Grid" instance=ExtResource("3_avdol")]
 position = Vector2(80, 32)
-type = 1
 
 [node name="Wall36" parent="Grid" instance=ExtResource("3_avdol")]
 position = Vector2(80, 16)
-type = 1
 
 [node name="Wall61" parent="Grid" instance=ExtResource("3_avdol")]
 position = Vector2(64, 48)
-type = 1
 
 [node name="Wall89" parent="Grid" instance=ExtResource("3_avdol")]
 position = Vector2(64, 16)
-type = 1
 
 [node name="Wall37" parent="Grid" instance=ExtResource("3_avdol")]
 position = Vector2(80, 0)
-type = 1
 
 [node name="Wall38" parent="Grid" instance=ExtResource("3_avdol")]
 position = Vector2(64, 0)
-type = 1
 
 [node name="Wall39" parent="Grid" instance=ExtResource("3_avdol")]
 position = Vector2(80, -32)
-type = 1
 
 [node name="Wall48" parent="Grid" instance=ExtResource("3_avdol")]
 position = Vector2(64, -32)
-type = 1
 
 [node name="Wall45" parent="Grid" instance=ExtResource("3_avdol")]
 position = Vector2(80, -16)
-type = 1
 
 [node name="Wall40" parent="Grid" instance=ExtResource("3_avdol")]
 position = Vector2(80, -48)
-type = 1
 
 [node name="Wall88" parent="Grid" instance=ExtResource("3_avdol")]
 position = Vector2(-80, -64)
-type = 1
 
 [node name="Wall90" parent="Grid" instance=ExtResource("3_avdol")]
 position = Vector2(80, -48)
-type = 1
 
 [node name="Wall2" parent="Grid" instance=ExtResource("3_avdol")]
 position = Vector2(-48, -48)
-type = 1
 
 [node name="Wall3" parent="Grid" instance=ExtResource("3_avdol")]
 position = Vector2(80, -64)
-type = 1
 
 [node name="Wall4" parent="Grid" instance=ExtResource("3_avdol")]
 position = Vector2(64, -48)
-type = 1
 
 [node name="Wall5" parent="Grid" instance=ExtResource("3_avdol")]
 position = Vector2(48, -48)
-type = 1
 
 [node name="Wall6" parent="Grid" instance=ExtResource("3_avdol")]
 position = Vector2(32, -48)
-type = 1
 
 [node name="Wall7" parent="Grid" instance=ExtResource("3_avdol")]
 position = Vector2(16, -48)
-type = 1
 
 [node name="Wall8" parent="Grid" instance=ExtResource("3_avdol")]
 position = Vector2(0, -48)
-type = 1
 
 [node name="Wall9" parent="Grid" instance=ExtResource("3_avdol")]
 position = Vector2(-16, -48)
-type = 1
 
 [node name="Wall10" parent="Grid" instance=ExtResource("3_avdol")]
 position = Vector2(-32, -48)
-type = 1
 
 [node name="Wall79" parent="Grid" instance=ExtResource("3_avdol")]
 position = Vector2(-64, -64)
-type = 1
 
 [node name="Wall80" parent="Grid" instance=ExtResource("3_avdol")]
 position = Vector2(-48, -64)
-type = 1
 
 [node name="Wall81" parent="Grid" instance=ExtResource("3_avdol")]
 position = Vector2(64, -64)
-type = 1
 
 [node name="Wall82" parent="Grid" instance=ExtResource("3_avdol")]
 position = Vector2(48, -64)
-type = 1
 
 [node name="Wall83" parent="Grid" instance=ExtResource("3_avdol")]
 position = Vector2(32, -64)
-type = 1
 
 [node name="Wall84" parent="Grid" instance=ExtResource("3_avdol")]
 position = Vector2(16, -64)
-type = 1
 
 [node name="Wall85" parent="Grid" instance=ExtResource("3_avdol")]
 position = Vector2(0, -64)
-type = 1
 
 [node name="Wall86" parent="Grid" instance=ExtResource("3_avdol")]
 position = Vector2(-16, -64)
-type = 1
 
 [node name="Wall87" parent="Grid" instance=ExtResource("3_avdol")]
 position = Vector2(-32, -64)
-type = 1
 
 [node name="Wall41" parent="Grid" instance=ExtResource("3_avdol")]
 position = Vector2(-16, -32)
-type = 1
 
 [node name="Wall42" parent="Grid" instance=ExtResource("3_avdol")]
 position = Vector2(0, -32)
-type = 1
 
 [node name="Wall43" parent="Grid" instance=ExtResource("3_avdol")]
 position = Vector2(16, -32)
-type = 1
 
 [node name="Wall44" parent="Grid" instance=ExtResource("3_avdol")]
 position = Vector2(32, -32)
-type = 1
 
 [node name="Wall46" parent="Grid" instance=ExtResource("3_avdol")]
 position = Vector2(32, 0)
-type = 1
 
 [node name="Wall47" parent="Grid" instance=ExtResource("3_avdol")]
 position = Vector2(16, 0)
-type = 1
 
 [node name="Wall54" parent="Grid" instance=ExtResource("3_avdol")]
 position = Vector2(32, 16)
-type = 1
 
 [node name="Wall55" parent="Grid" instance=ExtResource("3_avdol")]
 position = Vector2(16, 16)
-type = 1
 
 [node name="Wall56" parent="Grid" instance=ExtResource("3_avdol")]
 position = Vector2(32, 32)
-type = 1
 
 [node name="Wall57" parent="Grid" instance=ExtResource("3_avdol")]
 position = Vector2(16, 32)
-type = 1
 
 [node name="Wall58" parent="Grid" instance=ExtResource("3_avdol")]
 position = Vector2(32, 48)
-type = 1
 
 [node name="Wall59" parent="Grid" instance=ExtResource("3_avdol")]
 position = Vector2(16, 48)
-type = 1
 
 [node name="Wall62" parent="Grid" instance=ExtResource("3_avdol")]
 position = Vector2(0, 32)
-type = 1
 
 [node name="Wall63" parent="Grid" instance=ExtResource("3_avdol")]
 position = Vector2(0, 48)
-type = 1
 
 [node name="Wall64" parent="Grid" instance=ExtResource("3_avdol")]
 position = Vector2(-16, 32)
-type = 1
 
 [node name="Wall65" parent="Grid" instance=ExtResource("3_avdol")]
 position = Vector2(-16, 48)
-type = 1
 
 [node name="Wall66" parent="Grid" instance=ExtResource("3_avdol")]
 position = Vector2(-32, 32)
-type = 1
 
 [node name="Wall67" parent="Grid" instance=ExtResource("3_avdol")]
 position = Vector2(-32, 48)
-type = 1
 
 [node name="Wall68" parent="Grid" instance=ExtResource("3_avdol")]
 position = Vector2(-48, 32)
-type = 1
 
 [node name="Wall69" parent="Grid" instance=ExtResource("3_avdol")]
 position = Vector2(-48, 48)
-type = 1
 
 [node name="Wall52" parent="Grid" instance=ExtResource("3_avdol")]
 position = Vector2(-48, 0)
-type = 1
 
 [node name="Wall91" parent="Grid" instance=ExtResource("3_avdol")]
 position = Vector2(-32, 0)
-type = 1
 
 [node name="Wall92" parent="Grid" instance=ExtResource("3_avdol")]
 position = Vector2(-16, 0)
-type = 1
 
 [node name="Wall93" parent="Grid" instance=ExtResource("3_avdol")]
-type = 1
 
 [node name="Wall53" parent="Grid" instance=ExtResource("3_avdol")]
 position = Vector2(-64, 0)
-type = 1
 
 [node name="Crate" parent="Grid" instance=ExtResource("4_8jlf3")]
 z_index = 2
@@ -387,14 +303,5 @@ position = Vector2(-64, 16)
 z_index = 1
 position = Vector2(-64, 16)
 
-[node name="Bomb" parent="Grid" instance=ExtResource("6_cwadg")]
-z_index = 2
+[node name="Bomb" parent="Grid" instance=ExtResource("6_kke1k")]
 position = Vector2(48, -32)
-
-[node name="CrackedWall" parent="Grid" instance=ExtResource("7_f4qrm")]
-z_index = 1
-position = Vector2(48, 80)
-
-[node name="CrackedWall2" parent="Grid" instance=ExtResource("7_f4qrm")]
-z_index = 1
-position = Vector2(64, 64)

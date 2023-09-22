@@ -6,7 +6,7 @@
 [node name="Wall" type="Node2D"]
 z_index = 1
 script = ExtResource("1_s0k5o")
-type = 2
+type = 1
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture_filter = 1

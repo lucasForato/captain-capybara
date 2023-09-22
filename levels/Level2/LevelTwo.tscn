@@ -299,6 +299,7 @@ type = 1
 
 [node name="Player" parent="Grid" instance=ExtResource("3_0ii3a")]
 position = Vector2(64, -48)
+type = 0
 
 [node name="Exit" parent="Grid" instance=ExtResource("4_l8f62")]
 z_index = 1

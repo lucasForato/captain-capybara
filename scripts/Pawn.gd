@@ -1,6 +1,6 @@
 extends Node2D
 
-enum CELL_TYPE {PLAYER, WALL, INVISIBLE_WALL, PORTAL, CRATE, EXIT, BOMB, CRACKED_WALL, FLOOR}
+enum CELL_TYPE {PLAYER, WALL, GATE, PORTAL, CRATE, EXIT, BOMB, CRACKED_WALL, FLOOR}
 @export var type: CELL_TYPE
 
 func is_player() -> bool:
@@ -14,3 +14,6 @@ func is_bomb() -> bool:
 
 func is_cracked_wall() -> bool:
 	return self.type == CELL_TYPE.CRACKED_WALL
+
+func is_gate() -> bool:
+	return self.type == CELL_TYPE.GATE

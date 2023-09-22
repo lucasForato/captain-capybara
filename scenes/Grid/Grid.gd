@@ -2,7 +2,7 @@ extends TileMap
 
 @onready var Camera = get_parent().get_parent()
 
-enum CELL_TYPE {PLAYER, WALL, INVISIBLE_WALL, PORTAL, CRATE, EXIT, BOMB, CRACKED_WALL, FLOOR}
+enum CELL_TYPE {PLAYER, WALL, GATE, PORTAL, CRATE, EXIT, BOMB, CRACKED_WALL, FLOOR}
 # the orientation tells us which side of the camera is facing up
 enum CAMERA_ORIENTATION {UP, RIGHT, DOWN, LEFT}
 
@@ -45,10 +45,11 @@ func is_exit(target: Vector2):
 func move(pawn, direction):
 	var target_position = get_target_position(pawn.position, direction)
 	var type = self.get_cell_type_by_position(target_position, 1)
-	var is_exit = self.is_exit(target_position)
-
-	if is_exit and pawn.type == CELL_TYPE.PLAYER:
-		emit_signal('exit')
+	
+	if type == -1:
+		var exit = self.get_cell_type_by_position(target_position, 2)
+		if exit == CELL_TYPE.EXIT and pawn.is_player():
+			emit_signal('exit')
 		
 	self.erase_cell(1, local_to_map(pawn.position))
 	pawn.set_position(target_position)
@@ -63,7 +64,7 @@ func request_move(pawn, direction) -> bool:
 		return true
 	if type == CELL_TYPE.WALL:
 		return false
-	if type == CELL_TYPE.INVISIBLE_WALL:
+	if type == CELL_TYPE.GATE:
 		return true
 	if type == CELL_TYPE.EXIT:
 		return true
@@ -101,18 +102,19 @@ func get_cracked_walls_around(pawn) -> Array:
 			positions.append(target)
 	return positions
 
-func get_cracked_wall_by_position(position: Vector2):
+func get_node_by_position(position: Vector2):
 	for node in get_children():
 		if node.position == position:
 			return node
 
 func explode_bomb(pawn):
 	var cracked_wall_positions = get_cracked_walls_around(pawn)
-	
+	self.erase_cell(1, local_to_map(pawn.position))
+	remove_child(pawn)
 	for position in cracked_wall_positions:
 		self.erase_cell(1, local_to_map(position))
-		var node = get_cracked_wall_by_position(position)
-		remove_child(node)
+		var cracked_wall = get_node_by_position(position)
+		remove_child(cracked_wall)
 
 func _rotate(camera_orientation: CAMERA_ORIENTATION) -> void:
 	orientation = camera_orientation
