@@ -24,7 +24,7 @@ func _ready():
 
 func _input(event: InputEvent):
 	if event.is_action_pressed("turn_left"):
-		rotate(-1.5708)
+		rotate(1.5708)
 		if camera_orientation == 0:
 			camera_orientation = 3
 		else:
@@ -32,7 +32,7 @@ func _input(event: InputEvent):
 	
 		
 	if event.is_action_pressed("turn_right"):
-		rotate(1.5708)		
+		rotate(-1.5708)		
 		if camera_orientation == 3:
 			camera_orientation = 0
 		else:
@@ -40,3 +40,7 @@ func _input(event: InputEvent):
 	
 	emit_signal("change_orientation", camera_orientation)
 	
+func reset():
+	camera_orientation = CAMERA_ORIENTATION.UP
+	self.rotation = 0
+			

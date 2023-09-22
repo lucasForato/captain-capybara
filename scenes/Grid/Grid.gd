@@ -2,11 +2,13 @@ extends TileMap
 
 @onready var Camera = get_parent().get_parent()
 
-enum CELL_TYPE {PLAYER, WALL, INVISIBLE_WALL, PORTAL, CRATE}
+enum CELL_TYPE {PLAYER, WALL, INVISIBLE_WALL, PORTAL, CRATE, EXIT}
 # the orientation tells us which side of the camera is facing up
 enum CAMERA_ORIENTATION {UP, RIGHT, DOWN, LEFT}
 
 var orientation = CAMERA_ORIENTATION.UP
+
+signal exit
 
 func is_camera_up() -> bool:
 	return orientation == CAMERA_ORIENTATION.UP
@@ -33,6 +35,10 @@ func get_cell_type_by_position(position: Vector2) -> int:
 	
 func move(pawn, direction):
 	var target_position = get_target_position(pawn, direction)
+	var type = self.get_cell_type_by_position(target_position)
+	if type == CELL_TYPE.EXIT:
+		emit_signal("exit")	
+		
 	erase_cell(1, local_to_map(pawn.position))
 	pawn.set_position(target_position)
 	set_cell(1, local_to_map(target_position), pawn.type, Vector2i(0, 0))
@@ -48,16 +54,12 @@ func request_move(pawn, direction) -> bool:
 		return false
 	if type == CELL_TYPE.INVISIBLE_WALL:
 		return true
+	if type == CELL_TYPE.EXIT:
+		return true
 	else:
 		return false
 
 func _rotate(camera_orientation: CAMERA_ORIENTATION) -> void:
-	print('UP IS: ', CAMERA_ORIENTATION.UP)
-	print('RIGHT IS: ', CAMERA_ORIENTATION.RIGHT)
-	print('DOWN IS: ', CAMERA_ORIENTATION.DOWN)
-	print('LEFT IS: ', CAMERA_ORIENTATION.LEFT)
-	
-	print(orientation)	
 	orientation = camera_orientation
 	
 		

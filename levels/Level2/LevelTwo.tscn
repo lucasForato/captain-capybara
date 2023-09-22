@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=3 uid="uid://vss1udp158if"]
+
+[ext_resource type="PackedScene" uid="uid://cwcsie0ucsoe" path="res://scenes/Grid/Grid.tscn" id="1_s7lr2"]
+[ext_resource type="PackedScene" uid="uid://dt8trl1rm2rev" path="res://scenes/Wall/Wall.tscn" id="2_he33k"]
+[ext_resource type="PackedScene" uid="uid://807eo0o5qysf" path="res://scenes/Player/Player.tscn" id="3_0ii3a"]
+[ext_resource type="PackedScene" uid="uid://5715rk80ob1j" path="res://scenes/Exit/Exit.tscn" id="4_l8f62"]
+
+[node name="LevelTwo" type="Node2D"]
+
+[node name="Grid" parent="." instance=ExtResource("1_s7lr2")]
+
+[node name="Wall" parent="Grid" instance=ExtResource("2_he33k")]
+
+[node name="Wall2" parent="Grid" instance=ExtResource("2_he33k")]
+position = Vector2(-16, 0)
+
+[node name="Wall3" parent="Grid" instance=ExtResource("2_he33k")]
+position = Vector2(-16, 16)
+
+[node name="Wall4" parent="Grid" instance=ExtResource("2_he33k")]
+position = Vector2(0, 16)
+
+[node name="Player" parent="Grid" instance=ExtResource("3_0ii3a")]
+position = Vector2(-64, -48)
+
+[node name="Exit" parent="Grid" instance=ExtResource("4_l8f62")]
+z_index = 1
+position = Vector2(48, 48)

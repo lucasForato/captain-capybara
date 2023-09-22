@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://5715rk80ob1j"]
+
+[ext_resource type="Script" path="res://scenes/Exit/Exit.gd" id="1_4nrpp"]
+[ext_resource type="Texture2D" uid="uid://r3wqo3vpuc7d" path="res://art/exit/exit.png" id="2_t7sh5"]
+
+[node name="Exit" type="Node2D"]
+script = ExtResource("1_4nrpp")
+type = 5
+
+[node name="Exit" type="Sprite2D" parent="."]
+z_index = 1
+texture_filter = 1
+position = Vector2(8, 8)
+texture = ExtResource("2_t7sh5")
