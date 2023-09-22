@@ -1,13 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://c3jc76qxd78qj"]
+[gd_scene load_steps=2 format=3 uid="uid://c3jc76qxd78qj"]
 
-[ext_resource type="PackedScene" uid="uid://cb6e0f3g7euiy" path="res://scenes/Camera/Camera.tscn" id="1_72qym"]
-[ext_resource type="PackedScene" uid="uid://g46gy4vsnwym" path="res://levels/Level1/LevelOne.tscn" id="1_phqy2"]
+[ext_resource type="PackedScene" uid="uid://dai3rm5re17il" path="res://scenes/LevelManager/LevelManager.tscn" id="2_pik4g"]
 
 [node name="Main" type="Node2D"]
 position = Vector2(33, -14)
 
-[node name="Camera" parent="." instance=ExtResource("1_72qym")]
-position = Vector2(0, 4)
-
-[node name="LevelOne" parent="Camera" instance=ExtResource("1_phqy2")]
-position = Vector2(-8, -8)
+[node name="LevelManager" parent="." instance=ExtResource("2_pik4g")]

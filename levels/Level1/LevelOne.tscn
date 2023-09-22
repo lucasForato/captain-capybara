@@ -9,6 +9,7 @@
 position = Vector2(0, 1)
 
 [node name="Grid" parent="." instance=ExtResource("1_wwwxl")]
+position = Vector2(0, 7)
 layer_1/name = ""
 layer_1/z_index = 1
 
