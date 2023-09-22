@@ -35,6 +35,7 @@ func next_level():
 
 
 func _exit():
+	print('NEXT LEVEL')
 	var current_level = visible_level
 	next_level()
 	self.remove_child(levels[current_level])

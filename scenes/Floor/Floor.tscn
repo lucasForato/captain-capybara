@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://ckotyoc3dwua6"]
+
+[ext_resource type="Script" path="res://scenes/Floor/Floor.gd" id="1_1o15p"]
+[ext_resource type="Texture2D" uid="uid://2jqwuxgge5wk" path="res://art/blocks/floor_block.png" id="1_u3o5l"]
+
+[node name="Floor" type="Node2D"]
+script = ExtResource("1_1o15p")
+type = 8
+
+[node name="FloorBlock" type="Sprite2D" parent="."]
+position = Vector2(8, 8)
+texture = ExtResource("1_u3o5l")

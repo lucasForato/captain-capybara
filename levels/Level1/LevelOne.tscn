@@ -1,10 +1,12 @@
-[gd_scene load_steps=6 format=3 uid="uid://g46gy4vsnwym"]
+[gd_scene load_steps=8 format=3 uid="uid://g46gy4vsnwym"]
 
 [ext_resource type="PackedScene" uid="uid://cwcsie0ucsoe" path="res://scenes/Grid/Grid.tscn" id="1_wwwxl"]
 [ext_resource type="PackedScene" uid="uid://807eo0o5qysf" path="res://scenes/Player/Player.tscn" id="2_htsff"]
 [ext_resource type="PackedScene" uid="uid://dt8trl1rm2rev" path="res://scenes/Wall/Wall.tscn" id="3_avdol"]
 [ext_resource type="PackedScene" uid="uid://b0l40saiq4kxp" path="res://scenes/Crate/Crate.tscn" id="4_8jlf3"]
 [ext_resource type="PackedScene" uid="uid://5715rk80ob1j" path="res://scenes/Exit/Exit.tscn" id="5_biojs"]
+[ext_resource type="PackedScene" uid="uid://il3tijkbfr2" path="res://scenes/Bomb/Bomb.tscn" id="6_cwadg"]
+[ext_resource type="PackedScene" uid="uid://j3rbfgoj6oi7" path="res://scenes/CrackedWall/CrackedWall.tscn" id="7_f4qrm"]
 
 [node name="LevelOne" type="Node2D"]
 position = Vector2(0, 1)
@@ -130,10 +132,6 @@ type = 1
 position = Vector2(32, 80)
 type = 1
 
-[node name="Wall77" parent="Grid" instance=ExtResource("3_avdol")]
-position = Vector2(48, 80)
-type = 1
-
 [node name="Wall78" parent="Grid" instance=ExtResource("3_avdol")]
 position = Vector2(64, 80)
 type = 1
@@ -160,10 +158,6 @@ type = 1
 
 [node name="Wall36" parent="Grid" instance=ExtResource("3_avdol")]
 position = Vector2(80, 16)
-type = 1
-
-[node name="Wall60" parent="Grid" instance=ExtResource("3_avdol")]
-position = Vector2(64, 64)
 type = 1
 
 [node name="Wall61" parent="Grid" instance=ExtResource("3_avdol")]
@@ -386,9 +380,21 @@ z_index = 2
 position = Vector2(64, 32)
 
 [node name="Create3" parent="Grid" instance=ExtResource("4_8jlf3")]
-z_index = 2
+z_index = 3
 position = Vector2(-64, 16)
 
 [node name="Exit" parent="Grid" instance=ExtResource("5_biojs")]
 z_index = 1
-position = Vector2(-48, 16)
+position = Vector2(-64, 16)
+
+[node name="Bomb" parent="Grid" instance=ExtResource("6_cwadg")]
+z_index = 2
+position = Vector2(48, -32)
+
+[node name="CrackedWall" parent="Grid" instance=ExtResource("7_f4qrm")]
+z_index = 1
+position = Vector2(48, 80)
+
+[node name="CrackedWall2" parent="Grid" instance=ExtResource("7_f4qrm")]
+z_index = 1
+position = Vector2(64, 64)

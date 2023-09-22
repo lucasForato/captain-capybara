@@ -3,7 +3,8 @@
 [ext_resource type="Script" path="res://scenes/Crate/Crate.gd" id="1_b2i0m"]
 [ext_resource type="Texture2D" uid="uid://c5t1cnvo8dw5x" path="res://art/crate/crate.png" id="2_hj2mk"]
 
-[node name="Create" type="Node2D"]
+[node name="Crate" type="Node2D"]
+z_index = 1
 script = ExtResource("1_b2i0m")
 type = 4
 

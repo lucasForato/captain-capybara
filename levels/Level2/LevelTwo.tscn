@@ -1,28 +1,332 @@
-[gd_scene load_steps=5 format=3 uid="uid://vss1udp158if"]
+[gd_scene load_steps=6 format=3 uid="uid://vss1udp158if"]
 
 [ext_resource type="PackedScene" uid="uid://cwcsie0ucsoe" path="res://scenes/Grid/Grid.tscn" id="1_s7lr2"]
 [ext_resource type="PackedScene" uid="uid://dt8trl1rm2rev" path="res://scenes/Wall/Wall.tscn" id="2_he33k"]
 [ext_resource type="PackedScene" uid="uid://807eo0o5qysf" path="res://scenes/Player/Player.tscn" id="3_0ii3a"]
 [ext_resource type="PackedScene" uid="uid://5715rk80ob1j" path="res://scenes/Exit/Exit.tscn" id="4_l8f62"]
+[ext_resource type="PackedScene" uid="uid://b0l40saiq4kxp" path="res://scenes/Crate/Crate.tscn" id="5_gj0sp"]
 
 [node name="LevelTwo" type="Node2D"]
 
 [node name="Grid" parent="." instance=ExtResource("1_s7lr2")]
 
 [node name="Wall" parent="Grid" instance=ExtResource("2_he33k")]
+position = Vector2(-64, -64)
+type = 1
 
 [node name="Wall2" parent="Grid" instance=ExtResource("2_he33k")]
-position = Vector2(-16, 0)
+position = Vector2(-80, -64)
+type = 1
+
+[node name="Wall15" parent="Grid" instance=ExtResource("2_he33k")]
+position = Vector2(-80, -48)
+type = 1
+
+[node name="Wall16" parent="Grid" instance=ExtResource("2_he33k")]
+position = Vector2(-80, -32)
+type = 1
+
+[node name="Wall17" parent="Grid" instance=ExtResource("2_he33k")]
+position = Vector2(-80, -16)
+type = 1
+
+[node name="Wall18" parent="Grid" instance=ExtResource("2_he33k")]
+position = Vector2(-80, 0)
+type = 1
+
+[node name="Wall19" parent="Grid" instance=ExtResource("2_he33k")]
+position = Vector2(-80, 16)
+type = 1
+
+[node name="Wall20" parent="Grid" instance=ExtResource("2_he33k")]
+position = Vector2(-80, 32)
+type = 1
+
+[node name="Wall21" parent="Grid" instance=ExtResource("2_he33k")]
+position = Vector2(-80, 48)
+type = 1
+
+[node name="Wall22" parent="Grid" instance=ExtResource("2_he33k")]
+position = Vector2(-80, 64)
+type = 1
+
+[node name="Wall23" parent="Grid" instance=ExtResource("2_he33k")]
+position = Vector2(-80, 80)
+type = 1
+
+[node name="Wall39" parent="Grid" instance=ExtResource("2_he33k")]
+position = Vector2(80, -48)
+type = 1
+
+[node name="Wall40" parent="Grid" instance=ExtResource("2_he33k")]
+position = Vector2(80, -32)
+type = 1
+
+[node name="Wall41" parent="Grid" instance=ExtResource("2_he33k")]
+position = Vector2(80, -16)
+type = 1
+
+[node name="Wall42" parent="Grid" instance=ExtResource("2_he33k")]
+position = Vector2(80, 0)
+type = 1
+
+[node name="Wall43" parent="Grid" instance=ExtResource("2_he33k")]
+position = Vector2(80, 16)
+type = 1
+
+[node name="Wall44" parent="Grid" instance=ExtResource("2_he33k")]
+position = Vector2(80, 32)
+type = 1
+
+[node name="Wall45" parent="Grid" instance=ExtResource("2_he33k")]
+position = Vector2(80, 48)
+type = 1
+
+[node name="Wall46" parent="Grid" instance=ExtResource("2_he33k")]
+position = Vector2(80, 64)
+type = 1
+
+[node name="Wall47" parent="Grid" instance=ExtResource("2_he33k")]
+position = Vector2(80, 80)
+type = 1
 
 [node name="Wall3" parent="Grid" instance=ExtResource("2_he33k")]
-position = Vector2(-16, 16)
+position = Vector2(-48, -64)
+type = 1
+
+[node name="Wall12" parent="Grid" instance=ExtResource("2_he33k")]
+position = Vector2(-64, -48)
+type = 1
+
+[node name="Wall13" parent="Grid" instance=ExtResource("2_he33k")]
+position = Vector2(-48, -48)
+type = 1
+
+[node name="Wall14" parent="Grid" instance=ExtResource("2_he33k")]
+position = Vector2(-64, -16)
+type = 1
+
+[node name="Wall24" parent="Grid" instance=ExtResource("2_he33k")]
+position = Vector2(-48, -16)
+type = 1
+
+[node name="Wall25" parent="Grid" instance=ExtResource("2_he33k")]
+position = Vector2(-64, 0)
+type = 1
+
+[node name="Wall38" parent="Grid" instance=ExtResource("2_he33k")]
+position = Vector2(-64, 16)
+type = 1
+
+[node name="Wall48" parent="Grid" instance=ExtResource("2_he33k")]
+position = Vector2(-64, 32)
+type = 1
+
+[node name="Wall37" parent="Grid" instance=ExtResource("2_he33k")]
+position = Vector2(-48, 0)
+type = 1
+
+[node name="Wall49" parent="Grid" instance=ExtResource("2_he33k")]
+position = Vector2(-64, 48)
+type = 1
+
+[node name="Wall50" parent="Grid" instance=ExtResource("2_he33k")]
+position = Vector2(-48, 48)
+type = 1
+
+[node name="Wall54" parent="Grid" instance=ExtResource("2_he33k")]
+position = Vector2(-64, 64)
+type = 1
+
+[node name="Wall55" parent="Grid" instance=ExtResource("2_he33k")]
+position = Vector2(-48, 64)
+type = 1
+
+[node name="Wall56" parent="Grid" instance=ExtResource("2_he33k")]
+position = Vector2(-64, 80)
+type = 1
+
+[node name="Wall57" parent="Grid" instance=ExtResource("2_he33k")]
+position = Vector2(-48, 80)
+type = 1
 
 [node name="Wall4" parent="Grid" instance=ExtResource("2_he33k")]
+position = Vector2(-32, -64)
+type = 1
+
+[node name="Wall5" parent="Grid" instance=ExtResource("2_he33k")]
+position = Vector2(0, -64)
+type = 1
+
+[node name="Wall6" parent="Grid" instance=ExtResource("2_he33k")]
+position = Vector2(-16, -64)
+type = 1
+
+[node name="Wall51" parent="Grid" instance=ExtResource("2_he33k")]
+position = Vector2(-16, -48)
+type = 1
+
+[node name="Wall52" parent="Grid" instance=ExtResource("2_he33k")]
+position = Vector2(16, -48)
+type = 1
+
+[node name="Wall53" parent="Grid" instance=ExtResource("2_he33k")]
+position = Vector2(0, -48)
+type = 1
+
+[node name="Wall58" parent="Grid" instance=ExtResource("2_he33k")]
+position = Vector2(-16, -16)
+type = 1
+
+[node name="Wall59" parent="Grid" instance=ExtResource("2_he33k")]
+position = Vector2(16, -16)
+type = 1
+
+[node name="Wall60" parent="Grid" instance=ExtResource("2_he33k")]
+position = Vector2(0, -16)
+type = 1
+
+[node name="Wall61" parent="Grid" instance=ExtResource("2_he33k")]
+position = Vector2(-16, 0)
+type = 1
+
+[node name="Wall62" parent="Grid" instance=ExtResource("2_he33k")]
+position = Vector2(16, 0)
+type = 1
+
+[node name="Wall70" parent="Grid" instance=ExtResource("2_he33k")]
+position = Vector2(32, 0)
+type = 1
+
+[node name="Wall71" parent="Grid" instance=ExtResource("2_he33k")]
+position = Vector2(48, 0)
+type = 1
+
+[node name="Wall72" parent="Grid" instance=ExtResource("2_he33k")]
+position = Vector2(64, 0)
+type = 1
+
+[node name="Wall63" parent="Grid" instance=ExtResource("2_he33k")]
+type = 1
+
+[node name="Wall64" parent="Grid" instance=ExtResource("2_he33k")]
+position = Vector2(-16, 16)
+type = 1
+
+[node name="Wall65" parent="Grid" instance=ExtResource("2_he33k")]
 position = Vector2(0, 16)
+type = 1
+
+[node name="Wall66" parent="Grid" instance=ExtResource("2_he33k")]
+position = Vector2(0, 48)
+type = 1
+
+[node name="Wall68" parent="Grid" instance=ExtResource("2_he33k")]
+position = Vector2(0, 64)
+type = 1
+
+[node name="Wall69" parent="Grid" instance=ExtResource("2_he33k")]
+position = Vector2(-16, 64)
+type = 1
+
+[node name="Wall67" parent="Grid" instance=ExtResource("2_he33k")]
+position = Vector2(0, 32)
+type = 1
+
+[node name="Wall7" parent="Grid" instance=ExtResource("2_he33k")]
+position = Vector2(16, -64)
+type = 1
+
+[node name="Wall8" parent="Grid" instance=ExtResource("2_he33k")]
+position = Vector2(32, -64)
+type = 1
+
+[node name="Wall9" parent="Grid" instance=ExtResource("2_he33k")]
+position = Vector2(48, -64)
+type = 1
+
+[node name="Wall10" parent="Grid" instance=ExtResource("2_he33k")]
+position = Vector2(64, -64)
+type = 1
+
+[node name="Wall11" parent="Grid" instance=ExtResource("2_he33k")]
+position = Vector2(80, -64)
+type = 1
+
+[node name="Wall26" parent="Grid" instance=ExtResource("2_he33k")]
+position = Vector2(-64, 96)
+type = 1
+
+[node name="Wall27" parent="Grid" instance=ExtResource("2_he33k")]
+position = Vector2(-80, 96)
+type = 1
+
+[node name="Wall28" parent="Grid" instance=ExtResource("2_he33k")]
+position = Vector2(-48, 96)
+type = 1
+
+[node name="Wall29" parent="Grid" instance=ExtResource("2_he33k")]
+position = Vector2(-32, 96)
+type = 1
+
+[node name="Wall30" parent="Grid" instance=ExtResource("2_he33k")]
+position = Vector2(0, 96)
+type = 1
+
+[node name="Wall31" parent="Grid" instance=ExtResource("2_he33k")]
+position = Vector2(-16, 96)
+type = 1
+
+[node name="Wall32" parent="Grid" instance=ExtResource("2_he33k")]
+position = Vector2(16, 96)
+type = 1
+
+[node name="Wall33" parent="Grid" instance=ExtResource("2_he33k")]
+position = Vector2(32, 96)
+type = 1
+
+[node name="Wall34" parent="Grid" instance=ExtResource("2_he33k")]
+position = Vector2(48, 96)
+type = 1
+
+[node name="Wall35" parent="Grid" instance=ExtResource("2_he33k")]
+position = Vector2(64, 96)
+type = 1
+
+[node name="Wall36" parent="Grid" instance=ExtResource("2_he33k")]
+position = Vector2(80, 96)
+type = 1
 
 [node name="Player" parent="Grid" instance=ExtResource("3_0ii3a")]
-position = Vector2(-64, -48)
+position = Vector2(64, -48)
 
 [node name="Exit" parent="Grid" instance=ExtResource("4_l8f62")]
 z_index = 1
-position = Vector2(48, 48)
+position = Vector2(64, 16)
+
+[node name="Crate" parent="Grid" instance=ExtResource("5_gj0sp")]
+position = Vector2(-32, -48)
+
+[node name="Crate2" parent="Grid" instance=ExtResource("5_gj0sp")]
+position = Vector2(16, 16)
+
+[node name="Crate3" parent="Grid" instance=ExtResource("5_gj0sp")]
+position = Vector2(16, 32)
+
+[node name="Crate4" parent="Grid" instance=ExtResource("5_gj0sp")]
+position = Vector2(16, 48)
+
+[node name="Crate5" parent="Grid" instance=ExtResource("5_gj0sp")]
+position = Vector2(32, 48)
+
+[node name="Crate6" parent="Grid" instance=ExtResource("5_gj0sp")]
+position = Vector2(32, 32)
+
+[node name="Crate7" parent="Grid" instance=ExtResource("5_gj0sp")]
+position = Vector2(32, 16)
+
+[node name="Crate8" parent="Grid" instance=ExtResource("5_gj0sp")]
+position = Vector2(-16, 32)
+
+[node name="Crate9" parent="Grid" instance=ExtResource("5_gj0sp")]
+position = Vector2(-16, 48)

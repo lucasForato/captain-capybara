@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://j3rbfgoj6oi7"]
+
+[ext_resource type="Script" path="res://scenes/CrackedWall/CrackedWall.gd" id="1_guftv"]
+[ext_resource type="Texture2D" uid="uid://bjduiu1gociil" path="res://art/cracked_wall/cracked_wall.png" id="2_c61ls"]
+
+[node name="CrackedWall" type="Node2D"]
+texture_filter = 1
+script = ExtResource("1_guftv")
+type = 7
+
+[node name="CrackedWall" type="Sprite2D" parent="."]
+position = Vector2(8, 8)
+texture = ExtResource("2_c61ls")

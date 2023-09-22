@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://il3tijkbfr2"]
+
+[ext_resource type="Script" path="res://scenes/Bomb/Bomb.gd" id="1_rr3c5"]
+[ext_resource type="Texture2D" uid="uid://bk7k1rjgy3roj" path="res://art/bomb/bomb.png" id="1_xdknv"]
+
+[node name="Bomb" type="Node2D"]
+texture_filter = 1
+script = ExtResource("1_rr3c5")
+type = 6
+
+[node name="Bomb" type="Sprite2D" parent="."]
+position = Vector2(8, 8)
+texture = ExtResource("1_xdknv")
