@@ -13,7 +13,6 @@ process_mode = 1
 script = ExtResource("1_uewfo")
 
 [node name="Camera" parent="." instance=ExtResource("2_odalr")]
-visible = false
 ignore_rotation = false
 
 [node name="LevelOne" parent="Camera" instance=ExtResource("3_tmtl2")]
@@ -29,3 +28,5 @@ position = Vector2(208, 1)
 position = Vector2(16, 192)
 
 [node name="LevelPreview" parent="." instance=ExtResource("7_jlkfn")]
+z_index = 99
+scale = Vector2(0.3, 0.3)
