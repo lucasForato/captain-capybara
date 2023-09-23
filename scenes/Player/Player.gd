@@ -19,3 +19,4 @@ func _input(event: InputEvent):
 		if not can_move:
 			return
 		Grid.move(self, event_name)
+		

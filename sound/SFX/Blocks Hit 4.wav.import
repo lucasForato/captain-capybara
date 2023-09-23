@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://0jnx2yunq4qs"
-path="res://.godot/imported/Blocks Hit 4.wav-7c3c260656b1acf249cb9b8ef699ba20.sample"
+path="res://.godot/imported/Blocks Hit 4.wav-a7ff048d9206a1963633b718c5827d69.sample"
 
 [deps]
 
-source_file="res://Sound/SFX/Blocks Hit 4.wav"
-dest_files=["res://.godot/imported/Blocks Hit 4.wav-7c3c260656b1acf249cb9b8ef699ba20.sample"]
+source_file="res://sound/SFX/Blocks Hit 4.wav"
+dest_files=["res://.godot/imported/Blocks Hit 4.wav-a7ff048d9206a1963633b718c5827d69.sample"]
 
 [params]
 

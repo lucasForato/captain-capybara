@@ -17,3 +17,9 @@ func is_cracked_wall() -> bool:
 
 func is_gate() -> bool:
 	return self.type == CELL_TYPE.GATE
+
+func is_wall() -> bool:
+	return self.type == CELL_TYPE.WALL
+	
+func is_crate() -> bool:
+	return self.type == CELL_TYPE.CRATE

@@ -1,11 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://g46gy4vsnwym"]
+[gd_scene load_steps=6 format=3 uid="uid://g46gy4vsnwym"]
 
 [ext_resource type="PackedScene" uid="uid://cwcsie0ucsoe" path="res://scenes/Grid/Grid.tscn" id="1_wwwxl"]
 [ext_resource type="PackedScene" uid="uid://807eo0o5qysf" path="res://scenes/Player/Player.tscn" id="2_htsff"]
 [ext_resource type="PackedScene" uid="uid://dt8trl1rm2rev" path="res://scenes/Wall/Wall.tscn" id="3_avdol"]
 [ext_resource type="PackedScene" uid="uid://b0l40saiq4kxp" path="res://scenes/Crate/Crate.tscn" id="4_8jlf3"]
 [ext_resource type="PackedScene" uid="uid://5715rk80ob1j" path="res://scenes/Exit/Exit.tscn" id="5_biojs"]
-[ext_resource type="PackedScene" uid="uid://il3tijkbfr2" path="res://scenes/Bomb/Bomb.tscn" id="6_kke1k"]
 
 [node name="LevelOne" type="Node2D"]
 position = Vector2(0, 1)
@@ -302,6 +301,3 @@ position = Vector2(-64, 16)
 [node name="Exit" parent="Grid" instance=ExtResource("5_biojs")]
 z_index = 1
 position = Vector2(-64, 16)
-
-[node name="Bomb" parent="Grid" instance=ExtResource("6_kke1k")]
-position = Vector2(48, -32)

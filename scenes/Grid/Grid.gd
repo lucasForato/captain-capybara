@@ -31,17 +31,16 @@ func _ready():
 		else:
 			set_cell(1, local_to_map(child.position), child.type, Vector2i(0, 0))
 
-	
 func get_cell_type_by_position(position: Vector2, layer: int) -> int:
 	var source_id = get_cell_source_id(layer, local_to_map(position))
 	return source_id
-	
+
 func is_exit(target: Vector2):
 	var type = get_cell_type_by_position(target, 2)
 	if type == CELL_TYPE.EXIT:
 		return true
 	return false	
-	
+
 func move(pawn, direction):
 	var target_position = get_target_position(pawn.position, direction)
 	var type = self.get_cell_type_by_position(target_position, 1)
@@ -73,33 +72,35 @@ func request_move(pawn, direction) -> bool:
 	else:
 		return false
 
-func get_cracked_walls_around(pawn) -> Array:
-	var target_up = self.get_target_position(pawn.position, 'move_up')
-	var target_up_left = self.get_target_position(target_up, 'move_left')
-	var target_up_right = self.get_target_position(target_up, 'move_right')
-	var target_down = self.get_target_position(pawn.position, 'move_down')
-	var target_down_left = self.get_target_position(target_down, 'move_down')
-	var target_down_right = self.get_target_position(target_down, 'move_down')
-	var target_left = self.get_target_position(pawn.position, 'move_left')
-	var target_right = self.get_target_position(pawn.position, 'move_right')
-	var targets = [
-		target_up, 
-		target_up_left, 
-		target_left, 
-		target_down_left, 
-		target_down, 
-		target_down_right, 
-		target_right,
-		target_up_right
-	]
+func get_cells_around(pawn) -> Array:
+	var up = pawn.position
+	up.y -= 16
+	var down = pawn.position
+	down.y += 16
+	var left = pawn.position
+	left.x -= 16
+	var right = pawn.position
+	right.x += 16
+	var up_left = up
+	up_left.x -= 16
+	var up_right = up
+	up_right.x += 16
+	var down_left = down
+	down_left.x -= 16
+	var down_right = down
+	down_right.x -= 16
+	return [up, up_right, up_left, left, right, down, down_left, down_right]
 	
+func get_cracked_walls_around(pawn) -> Array:	
 	var positions: Array = []
 	
-	for target in targets:
-		var type = self.get_cell_type_by_position(target, 1)
+	var cells = get_cells_around(pawn)
+	
+	for cell in cells:
+		var type = self.get_cell_type_by_position(cell, 1)
 		
 		if type == CELL_TYPE.CRACKED_WALL:
-			positions.append(target)
+			positions.append(cell)
 	return positions
 
 func get_node_by_position(position: Vector2):
@@ -118,7 +119,6 @@ func explode_bomb(pawn):
 
 func _rotate(camera_orientation: CAMERA_ORIENTATION) -> void:
 	orientation = camera_orientation
-	
 		
 func get_target_position(position: Vector2, direction: String) -> Vector2:
 	var target = position

@@ -15,9 +15,6 @@ z_index = 5
 position = Vector2(8, 80)
 ignore_rotation = false
 
-[node name="LevelFour" parent="Camera" instance=ExtResource("6_lpodl")]
-position = Vector2(40, 176)
-
 [node name="LevelOne" parent="Camera" instance=ExtResource("3_mfl86")]
 position = Vector2(424, -24)
 
@@ -26,3 +23,6 @@ position = Vector2(40, -17)
 
 [node name="LevelThree" parent="Camera" instance=ExtResource("5_145kw")]
 position = Vector2(232, -17)
+
+[node name="LevelFour" parent="Camera" instance=ExtResource("6_lpodl")]
+position = Vector2(40, 176)

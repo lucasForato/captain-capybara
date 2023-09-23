@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://curvcx4f4t7mi"
-path="res://.godot/imported/Capybara Moves 1.wav-9d87327decf85a2e67edc66fc8b29ec9.sample"
+path="res://.godot/imported/Capybara Moves 1.wav-c54e997a8ff38ab03d5c36d664f41d06.sample"
 
 [deps]
 
-source_file="res://Sound/SFX/Capybara Moves 1.wav"
-dest_files=["res://.godot/imported/Capybara Moves 1.wav-9d87327decf85a2e67edc66fc8b29ec9.sample"]
+source_file="res://sound/SFX/Capybara Moves 1.wav"
+dest_files=["res://.godot/imported/Capybara Moves 1.wav-c54e997a8ff38ab03d5c36d664f41d06.sample"]
 
 [params]
 
