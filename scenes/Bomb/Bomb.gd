@@ -21,8 +21,9 @@ func has_exploded() -> bool:
 func _ready():
 	self._onready()
 	explosion_timer.wait_time = 2
-	add_child(explosion_timer)		
-	explosion_timer.connect("timeout", Callable(self, '_explode'))	
+	add_child(explosion_timer)
+	$AnimatedSprite2D.play('default')
+	explosion_timer.connect("timeout", Callable(self, '_explode'))
 
 
 func _process(delta):
@@ -47,4 +48,9 @@ func stop_explosion_timer():
 
 func _explode():
 	state = BOMB_STATES.EXPLODED
+	$AnimatedSprite2D.connect('animation_looped', Callable(self, '_finished_explosion'))
+	$AnimatedSprite2D.play('explode')
+
+func _finished_explosion():
 	self.Grid.explode_bomb(self)
+	
