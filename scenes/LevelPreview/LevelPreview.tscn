@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://b3yc8iu1gyk33"]
+
+[ext_resource type="Script" path="res://scenes/LevelPreview/LevelPreview.gd" id="1_e6qvx"]
+[ext_resource type="Texture2D" uid="uid://mhuqv5koh43d" path="res://art/start/start.png" id="2_kwmgb"]
+
+[node name="LevelPreview" type="Node2D"]
+process_mode = 1
+script = ExtResource("1_e6qvx")
+
+[node name="Start" type="Sprite2D" parent="."]
+z_index = 10
+texture_filter = 1
+texture = ExtResource("2_kwmgb")

@@ -12,6 +12,7 @@ func _ready():
 		camera.remove_child(level)
 	self.first_level()
 
+
 func first_level():
 	var level = levels[visible_level]
 	var grid = level.get_children()[0]

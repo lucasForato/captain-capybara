@@ -1,18 +1,18 @@
 [gd_scene load_steps=4 format=3 uid="uid://b0l40saiq4kxp"]
 
-[ext_resource type="Script" path="res://scenes/Crate/Crate.gd" id="1_b2i0m"]
-[ext_resource type="Texture2D" uid="uid://c5t1cnvo8dw5x" path="res://art/crate/crate.png" id="2_hj2mk"]
-[ext_resource type="AudioStream" uid="uid://0jnx2yunq4qs" path="res://sound/SFX/Blocks Hit 4.wav" id="3_s5t40"]
+[ext_resource type="Script" path="res://scenes/Crate/Crate.gd" id="1_el14k"]
+[ext_resource type="Texture2D" uid="uid://c5t1cnvo8dw5x" path="res://art/crate/crate.png" id="2_b344c"]
+[ext_resource type="AudioStream" uid="uid://0jnx2yunq4qs" path="res://sound/SFX/Blocks Hit 4.wav" id="3_kna8x"]
 
 [node name="Crate" type="Node2D"]
 z_index = 1
-script = ExtResource("1_b2i0m")
+script = ExtResource("1_el14k")
 type = 4
 
 [node name="Crate" type="Sprite2D" parent="."]
 texture_filter = 1
 position = Vector2(8, 8)
-texture = ExtResource("2_hj2mk")
+texture = ExtResource("2_b344c")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("3_s5t40")
+stream = ExtResource("3_kna8x")
