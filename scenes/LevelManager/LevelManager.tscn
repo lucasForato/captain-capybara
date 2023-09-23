@@ -1,37 +1,29 @@
 [gd_scene load_steps=8 format=3 uid="uid://dai3rm5re17il"]
 
-[ext_resource type="Script" path="res://scenes/LevelManager/LevelManager.gd" id="1_epari"]
-[ext_resource type="PackedScene" uid="uid://cb6e0f3g7euiy" path="res://scenes/Camera/Camera.tscn" id="2_x7guf"]
-[ext_resource type="PackedScene" uid="uid://g46gy4vsnwym" path="res://levels/Level1/LevelOne.tscn" id="3_mfl86"]
-[ext_resource type="PackedScene" uid="uid://c5qk5riuqngeu" path="res://levels/Level3/LevelThree.tscn" id="5_145kw"]
-[ext_resource type="PackedScene" uid="uid://vss1udp158if" path="res://levels/Level2/LevelTwo.tscn" id="5_kh4lp"]
-[ext_resource type="PackedScene" uid="uid://ds4wmoouv31ea" path="res://levels/Level4/LevelFour.tscn" id="6_lpodl"]
-[ext_resource type="PackedScene" uid="uid://cyvnbqvimfk4b" path="res://scenes/Preview/LevelPreview.tscn" id="7_inpnu"]
+[ext_resource type="Script" path="res://scenes/LevelManager/LevelManager.gd" id="1_uewfo"]
+[ext_resource type="PackedScene" uid="uid://cb6e0f3g7euiy" path="res://scenes/Camera/Camera.tscn" id="2_odalr"]
+[ext_resource type="PackedScene" uid="uid://g46gy4vsnwym" path="res://levels/Level1/LevelOne.tscn" id="3_tmtl2"]
+[ext_resource type="PackedScene" uid="uid://vss1udp158if" path="res://levels/Level2/LevelTwo.tscn" id="4_17vl5"]
+[ext_resource type="PackedScene" uid="uid://c5qk5riuqngeu" path="res://levels/Level3/LevelThree.tscn" id="5_5vykp"]
+[ext_resource type="PackedScene" uid="uid://ds4wmoouv31ea" path="res://levels/Level4/LevelFour.tscn" id="6_cn7dv"]
+[ext_resource type="PackedScene" uid="uid://cyvnbqvimfk4b" path="res://scenes/Preview/LevelPreview.tscn" id="7_jlkfn"]
 
 [node name="LevelManager" type="Node2D"]
 process_mode = 1
 script = ExtResource("1_uewfo")
 
-[node name="Camera" parent="." instance=ExtResource("2_3syek")]
-z_index = 5
-position = Vector2(8, 80)
-ignore_rotation = false
+[node name="Camera" parent="." instance=ExtResource("2_odalr")]
 
 [node name="LevelOne" parent="Camera" instance=ExtResource("3_tmtl2")]
-position = Vector2(424, -24)
+position = Vector2(16, -8)
 
-[node name="LevelTwo" parent="Camera" instance=ExtResource("4_wgtm1")]
-position = Vector2(40, -17)
+[node name="LevelFour" parent="Camera" instance=ExtResource("6_cn7dv")]
+position = Vector2(400, 0)
 
-[node name="LevelThree" parent="Camera" instance=ExtResource("5_2i7mv")]
-position = Vector2(232, -17)
+[node name="LevelTwo" parent="Camera" instance=ExtResource("4_17vl5")]
+position = Vector2(208, 1)
 
-[node name="LevelFour" parent="Camera" instance=ExtResource("6_gav12")]
-position = Vector2(40, 176)
+[node name="LevelThree" parent="Camera" instance=ExtResource("5_5vykp")]
+position = Vector2(16, 192)
 
-[node name="LevelPreview" parent="." instance=ExtResource("7_inpnu")]
-light_mask = 524289
-visibility_layer = 524288
-z_index = 99
-position = Vector2(45, 108)
-scale = Vector2(0.3, 0.3)
+[node name="LevelPreview" parent="." instance=ExtResource("7_jlkfn")]

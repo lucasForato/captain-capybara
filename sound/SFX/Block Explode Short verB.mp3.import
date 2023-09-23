@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dv20feagn6u53"
+path="res://.godot/imported/Block Explode Short verB.mp3-e1a39d9e7c2ff3a0f5d4d4b39eff9384.mp3str"
+
+[deps]
+
+source_file="res://sound/SFX/Block Explode Short verB.mp3"
+dest_files=["res://.godot/imported/Block Explode Short verB.mp3-e1a39d9e7c2ff3a0f5d4d4b39eff9384.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
