@@ -1,12 +1,12 @@
 [gd_scene load_steps=8 format=3 uid="uid://dai3rm5re17il"]
 
-[ext_resource type="Script" path="res://scenes/LevelManager/LevelManager.gd" id="1_uewfo"]
-[ext_resource type="PackedScene" uid="uid://cb6e0f3g7euiy" path="res://scenes/Camera/Camera.tscn" id="2_3syek"]
-[ext_resource type="PackedScene" uid="uid://g46gy4vsnwym" path="res://levels/Level1/LevelOne.tscn" id="3_tmtl2"]
-[ext_resource type="PackedScene" uid="uid://vss1udp158if" path="res://levels/Level2/LevelTwo.tscn" id="4_wgtm1"]
-[ext_resource type="PackedScene" uid="uid://c5qk5riuqngeu" path="res://levels/Level3/LevelThree.tscn" id="5_2i7mv"]
-[ext_resource type="PackedScene" uid="uid://ds4wmoouv31ea" path="res://levels/Level4/LevelFour.tscn" id="6_gav12"]
-[ext_resource type="PackedScene" uid="uid://byxjdljevegc7" path="res://scenes/LifeBar/LifeBar.tscn" id="7_tg436"]
+[ext_resource type="Script" path="res://scenes/LevelManager/LevelManager.gd" id="1_epari"]
+[ext_resource type="PackedScene" uid="uid://cb6e0f3g7euiy" path="res://scenes/Camera/Camera.tscn" id="2_x7guf"]
+[ext_resource type="PackedScene" uid="uid://g46gy4vsnwym" path="res://levels/Level1/LevelOne.tscn" id="3_mfl86"]
+[ext_resource type="PackedScene" uid="uid://c5qk5riuqngeu" path="res://levels/Level3/LevelThree.tscn" id="5_145kw"]
+[ext_resource type="PackedScene" uid="uid://vss1udp158if" path="res://levels/Level2/LevelTwo.tscn" id="5_kh4lp"]
+[ext_resource type="PackedScene" uid="uid://ds4wmoouv31ea" path="res://levels/Level4/LevelFour.tscn" id="6_lpodl"]
+[ext_resource type="PackedScene" uid="uid://cyvnbqvimfk4b" path="res://scenes/Preview/LevelPreview.tscn" id="7_inpnu"]
 
 [node name="LevelManager" type="Node2D"]
 process_mode = 1
@@ -29,4 +29,9 @@ position = Vector2(232, -17)
 [node name="LevelFour" parent="Camera" instance=ExtResource("6_gav12")]
 position = Vector2(40, 176)
 
-[node name="LifeBar" parent="." instance=ExtResource("7_tg436")]
+[node name="LevelPreview" parent="." instance=ExtResource("7_inpnu")]
+light_mask = 524289
+visibility_layer = 524288
+z_index = 99
+position = Vector2(45, 108)
+scale = Vector2(0.3, 0.3)

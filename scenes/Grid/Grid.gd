@@ -8,6 +8,7 @@ enum CAMERA_ORIENTATION {UP, RIGHT, DOWN, LEFT}
 
 var orientation = CAMERA_ORIENTATION.UP
 #var Floor = load('res://scenes/Floor/Floor.tscn')
+var stop_physics = false
 
 signal exit
 
@@ -54,8 +55,15 @@ func move(pawn, direction):
 	pawn.set_position(target_position)
 	set_cell(1, local_to_map(target_position), pawn.type, Vector2i(0, 0))
 
+func stop():
+	stop_physics = true
+
+func restart():
+	stop_physics = false
 
 func request_move(pawn, direction) -> bool:
+	if stop_physics == true:
+		return false
 	var target_position = self.get_target_position(pawn.position, direction)
 	var type = self.get_cell_type_by_position(target_position, 1)
 	
