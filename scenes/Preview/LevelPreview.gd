@@ -15,10 +15,8 @@ func _ready():
 	add_child(timer)
 	timer.connect("timeout", Callable(self, '_timeout'))
 	timer.stop()
-	pass # Replace with function body.
 
 func start(level, grid):
-	print('start')
 	cur_level = level
 	cur_grid = grid
 	grid.stop()
