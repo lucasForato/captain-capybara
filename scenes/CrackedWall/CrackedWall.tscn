@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://j3rbfgoj6oi7"]
 
 [ext_resource type="Script" path="res://scenes/CrackedWall/CrackedWall.gd" id="1_guftv"]
-[ext_resource type="Texture2D" uid="uid://bjduiu1gociil" path="res://art/cracked_wall/cracked_wall.png" id="2_c61ls"]
+[ext_resource type="Texture2D" uid="uid://cae8eyiirvaac" path="res://art/blocks/sprite_wall1.png" id="2_4twb4"]
 
 [node name="CrackedWall" type="Node2D"]
 texture_filter = 1
@@ -10,4 +10,4 @@ type = 7
 
 [node name="CrackedWall" type="Sprite2D" parent="."]
 position = Vector2(8, 8)
-texture = ExtResource("2_c61ls")
+texture = ExtResource("2_4twb4")

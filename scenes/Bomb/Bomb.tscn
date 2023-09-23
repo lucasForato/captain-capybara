@@ -1,13 +1,60 @@
-[gd_scene load_steps=3 format=3 uid="uid://il3tijkbfr2"]
+[gd_scene load_steps=11 format=3 uid="uid://il3tijkbfr2"]
 
 [ext_resource type="Script" path="res://scenes/Bomb/Bomb.gd" id="1_rr3c5"]
-[ext_resource type="Texture2D" uid="uid://bk7k1rjgy3roj" path="res://art/bomb/bomb.png" id="1_xdknv"]
+[ext_resource type="Texture2D" uid="uid://by60pubiutgld" path="res://art/bomb/bomb-1.png" id="3_rbajr"]
+[ext_resource type="Texture2D" uid="uid://d0yggwco5d8mq" path="res://art/bomb/bomb-2.png" id="4_uavjx"]
+[ext_resource type="Texture2D" uid="uid://dk2ruoe1srtlb" path="res://art/bomb/bomb-3.png" id="5_amuc7"]
+[ext_resource type="Texture2D" uid="uid://drews3wce63ah" path="res://art/explosion/explosion_1.png" id="5_ig6hy"]
+[ext_resource type="Texture2D" uid="uid://c8ith71ju0arn" path="res://art/explosion/explosion_2.png" id="6_fl80n"]
+[ext_resource type="Texture2D" uid="uid://tnlexycei4yx" path="res://art/explosion/explosion_3.png" id="7_46fge"]
+[ext_resource type="Texture2D" uid="uid://c4ti2kuc5p233" path="res://art/explosion/explosion_4.png" id="8_bfj8b"]
+[ext_resource type="Texture2D" uid="uid://dfbryxtltsjq7" path="res://art/explosion/explosion_5.png" id="9_v5erl"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_thbje"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_rbajr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_uavjx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_amuc7")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_ig6hy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_fl80n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_46fge")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_bfj8b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_v5erl")
+}],
+"loop": true,
+"name": &"explode",
+"speed": 5.0
+}]
 
 [node name="Bomb" type="Node2D"]
 texture_filter = 1
 script = ExtResource("1_rr3c5")
 type = 6
 
-[node name="Bomb" type="Sprite2D" parent="."]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+z_index = 3
+texture_filter = 1
 position = Vector2(8, 8)
-texture = ExtResource("1_xdknv")
+sprite_frames = SubResource("SpriteFrames_thbje")
+animation = &"explode"

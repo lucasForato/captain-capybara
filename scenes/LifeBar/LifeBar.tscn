@@ -1,0 +1,44 @@
+[gd_scene load_steps=4 format=3 uid="uid://byxjdljevegc7"]
+
+[ext_resource type="Texture2D" uid="uid://dqpqsi0oltwmq" path="res://art/heart/empty_heart.png" id="1_as1vc"]
+[ext_resource type="Script" path="res://scenes/LifeBar/LifeBar.gd" id="1_w178l"]
+[ext_resource type="Texture2D" uid="uid://c6gt7skknco4f" path="res://art/heart/filled_heart.png" id="2_v774r"]
+
+[node name="LifeBar" type="Node2D"]
+script = ExtResource("1_w178l")
+
+[node name="EmptyHeart1" type="Sprite2D" parent="."]
+z_index = 50
+texture_filter = 1
+position = Vector2(8, 8)
+texture = ExtResource("1_as1vc")
+
+[node name="EmptyHeart2" type="Sprite2D" parent="."]
+z_index = 50
+texture_filter = 1
+position = Vector2(25, 8)
+texture = ExtResource("1_as1vc")
+
+[node name="EmptyHeart3" type="Sprite2D" parent="."]
+z_index = 50
+texture_filter = 1
+position = Vector2(42, 8)
+texture = ExtResource("1_as1vc")
+
+[node name="FilledHeart1" type="Sprite2D" parent="."]
+z_index = 100
+texture_filter = 1
+position = Vector2(8, 8)
+texture = ExtResource("2_v774r")
+
+[node name="FilledHeart2" type="Sprite2D" parent="."]
+z_index = 100
+texture_filter = 1
+position = Vector2(25, 8)
+texture = ExtResource("2_v774r")
+
+[node name="FilledHeart3" type="Sprite2D" parent="."]
+z_index = 100
+texture_filter = 1
+position = Vector2(42, 8)
+texture = ExtResource("2_v774r")

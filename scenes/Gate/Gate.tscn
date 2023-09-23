@@ -1,13 +1,44 @@
-[gd_scene load_steps=3 format=3 uid="uid://bn7gdpt3bdqpj"]
+[gd_scene load_steps=9 format=3 uid="uid://bn7gdpt3bdqpj"]
 
-[ext_resource type="Texture2D" uid="uid://dababjgpskw5m" path="res://art/gate/gate.png" id="1_1adgu"]
 [ext_resource type="Script" path="res://scenes/Gate/Gate.gd" id="1_evrsm"]
+[ext_resource type="Texture2D" uid="uid://bsuqevr8hp8up" path="res://art/gate/portal-0.png" id="3_a35jc"]
+[ext_resource type="Texture2D" uid="uid://o4vbhylyh16r" path="res://art/gate/portal-1.png" id="4_c34fn"]
+[ext_resource type="Texture2D" uid="uid://dx0xculft6wja" path="res://art/gate/portal-3.png" id="5_j02mq"]
+[ext_resource type="Texture2D" uid="uid://dlw66w4hnsste" path="res://art/gate/portal-4.png" id="6_sa6we"]
+[ext_resource type="Texture2D" uid="uid://dvv1uexijyk3s" path="res://art/gate/portal-5.png" id="7_ws5nk"]
+[ext_resource type="Texture2D" uid="uid://ild5n5vai7ug" path="res://art/gate/portal-6.png" id="8_4arn4"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_o20gu"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_a35jc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_c34fn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_j02mq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_sa6we")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_ws5nk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_4arn4")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [node name="Gate" type="Node2D"]
 script = ExtResource("1_evrsm")
 type = 2
 
-[node name="Gate" type="Sprite2D" parent="."]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
 position = Vector2(8, 8)
-texture = ExtResource("1_1adgu")
+sprite_frames = SubResource("SpriteFrames_o20gu")

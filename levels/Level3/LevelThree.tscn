@@ -224,4 +224,4 @@ position = Vector2(-48, 16)
 position = Vector2(-32, -32)
 
 [node name="Crate5" parent="Grid" instance=ExtResource("5_4111c")]
-position = Vector2(16, -33)
+position = Vector2(16, -32)

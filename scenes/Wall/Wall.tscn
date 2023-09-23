@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://dt8trl1rm2rev"]
 
 [ext_resource type="Script" path="res://scenes/Wall/Wall.gd" id="1_s0k5o"]
-[ext_resource type="Texture2D" uid="uid://b1xrg20jcwj45" path="res://art/blocks/wall_block.png" id="2_0sp47"]
+[ext_resource type="Texture2D" uid="uid://bx5nf3ved1fem" path="res://art/blocks/sprite_wall0.png" id="2_hwtgp"]
 
 [node name="Wall" type="Node2D"]
 z_index = 1
@@ -11,4 +11,4 @@ type = 1
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture_filter = 1
 position = Vector2(8, 8)
-texture = ExtResource("2_0sp47")
+texture = ExtResource("2_hwtgp")

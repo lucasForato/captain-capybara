@@ -28,9 +28,12 @@ func _timeout():
 		if not can_perform_next_move:
 			var position = Grid.get_target_position(self.position, "move_down")
 			var node = Grid.get_node_by_position(position)		
+			if not node:
+				return
 			if node.is_bomb():
 				return
 			if node.is_crate():
+				
 				return
 			emit_signal('hit_wall')
 
