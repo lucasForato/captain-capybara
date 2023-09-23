@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=3 uid="uid://cyvnbqvimfk4b"]
+
+[ext_resource type="Script" path="res://scenes/Preview/LevelPreview.gd" id="1_7bi5f"]
+[ext_resource type="Texture2D" uid="uid://bgkjslw6wymq0" path="res://art/level_preview/2.png" id="3_6rshj"]
+[ext_resource type="Texture2D" uid="uid://cboju58jntrdl" path="res://art/level_preview/3.png" id="4_lnrgp"]
+[ext_resource type="Texture2D" uid="uid://btceyc5baxnr7" path="res://art/level_preview/1.png" id="5_wl35w"]
+
+[node name="LevelPreview" type="Node2D"]
+script = ExtResource("1_7bi5f")
+
+[node name="1" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(76, 73.5)
+scale = Vector2(1, 0.789062)
+texture = ExtResource("5_wl35w")
+
+[node name="2" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(77, 76)
+texture = ExtResource("3_6rshj")
+
+[node name="3" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(76, 76)
+texture = ExtResource("4_lnrgp")
