@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://c4ddjtalpimpt"
+path="res://.godot/imported/Portal SFX ver. B.mp3-d769eac521e2118227b61b60516376bc.mp3str"
+
+[deps]
+
+source_file="res://sound/SFX/Portal SFX ver. B.mp3"
+dest_files=["res://.godot/imported/Portal SFX ver. B.mp3-d769eac521e2118227b61b60516376bc.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
