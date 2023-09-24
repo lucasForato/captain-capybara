@@ -4,6 +4,7 @@ extends Node2D
 @onready var levels := camera.get_children()
 @onready var countdown := self.get_children()[1]
 
+var level_restarted = false
 var visible_level: int = 0
 var levels_started = {}
 var cur_level
@@ -15,7 +16,7 @@ func _ready():
 		camera.remove_child(level)
 
 func _process(time):
-	if countdown.is_stopped() == true:
+	if countdown.is_stopped() == true or level_restarted == true:
 		self.start_level()
 	pass
 
@@ -30,11 +31,14 @@ func start_level():
 	levels_started[visible_level] = true
 	countdown.reset()
 	countdown.start(level, grid)
-	
+
 func next_level():
 	camera.reset()
-	visible_level += 1
 	var level = levels[visible_level]
+	level.queue_free()
+	self.remove_child(level)
+	visible_level += 1
+	level = levels[visible_level]
 	if not level:
 		return
 

@@ -169,5 +169,12 @@ func get_target_position(position: Vector2, direction: String) -> Vector2:
 	
 	return target
 
+func restart_level():
+	self.get_tree().reload_current_scene()
+
+func _input(event: InputEvent):
+	if event.is_action_pressed("restart"):
+		self.restart_level()
+
 
 
