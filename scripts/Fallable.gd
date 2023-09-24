@@ -8,6 +8,7 @@ var finished_move = false
 var can_fall = true
 
 signal hit_wall
+
 var has_hit_wall := false
 
 func _onready():
@@ -19,6 +20,8 @@ func _onready():
 
 		
 func _timeout():
+	if not physics:
+		pass
 	var can_move = Grid.request_move(self, 'move_down')
 	if not can_move:		
 		timer.start()

@@ -116,10 +116,12 @@ func get_node_by_position(position: Vector2):
 		if node.position == position:
 			return node
 
-func explode_bomb(pawn):
-	var cracked_wall_positions = get_cracked_walls_around(pawn)
+func remove_bomb(pawn):
 	self.erase_cell(1, local_to_map(pawn.position))
 	remove_child(pawn)
+
+func explode_bomb(pawn):
+	var cracked_wall_positions = get_cracked_walls_around(pawn)
 	for position in cracked_wall_positions:
 		self.erase_cell(1, local_to_map(position))
 		var cracked_wall = get_node_by_position(position)
