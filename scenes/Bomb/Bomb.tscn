@@ -50,6 +50,7 @@ animations = [{
 [node name="Bomb" type="Node2D"]
 texture_filter = 1
 script = ExtResource("1_rr3c5")
+time_to_fall = null
 type = 6
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]

@@ -4,6 +4,7 @@ var explosion_timer = Timer.new()
 enum BOMB_STATES {NOT_EXPLODABLE, EXPLODABLE, TIMER, EXPLODED}
 var state = BOMB_STATES.NOT_EXPLODABLE
 
+
 signal exploded
 
 func is_not_explodable() -> bool:
@@ -50,7 +51,9 @@ func _explode():
 	state = BOMB_STATES.EXPLODED
 	$AnimatedSprite2D.connect('animation_looped', Callable(self, '_finished_explosion'))
 	$AnimatedSprite2D.play('explode')
+	self.Grid.explode_bomb(self)
+	
 
 func _finished_explosion():
-	self.Grid.explode_bomb(self)
+	self.Grid.remove_bomb(self)
 	
