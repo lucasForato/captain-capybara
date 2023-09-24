@@ -51,6 +51,7 @@ func _explode():
 	state = BOMB_STATES.EXPLODED
 	$AnimatedSprite2D.connect('animation_looped', Callable(self, '_finished_explosion'))
 	$AnimatedSprite2D.play('explode')
+	self.get_children()[1].play()
 	self.Grid.explode_bomb(self)
 	
 

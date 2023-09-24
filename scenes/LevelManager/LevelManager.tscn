@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://dai3rm5re17il"]
+[gd_scene load_steps=11 format=3 uid="uid://dai3rm5re17il"]
 
 [ext_resource type="Script" path="res://scenes/LevelManager/LevelManager.gd" id="1_uewfo"]
 [ext_resource type="PackedScene" uid="uid://cb6e0f3g7euiy" path="res://scenes/Camera/Camera.tscn" id="2_odalr"]
@@ -8,6 +8,9 @@
 [ext_resource type="PackedScene" uid="uid://ds4wmoouv31ea" path="res://levels/Level4/LevelFour.tscn" id="6_cn7dv"]
 [ext_resource type="PackedScene" uid="uid://l5ogcwfx8g2e" path="res://levels/Level5/LevelFive.tscn" id="7_0e0ya"]
 [ext_resource type="PackedScene" uid="uid://cyvnbqvimfk4b" path="res://scenes/Preview/LevelPreview.tscn" id="7_jlkfn"]
+[ext_resource type="AudioStream" uid="uid://dn1fvcvh7vs6" path="res://sound/SFX/Screen Rotate verA.wav" id="8_jdd1i"]
+[ext_resource type="AudioStream" uid="uid://cmlhrh3paonu" path="res://sound/SFX/Screen_Rotate_verB.wav" id="9_akqw0"]
+[ext_resource type="AudioStream" uid="uid://bn0n4vkgal7r0" path="res://sound/SFX/Portal SFX ver. B.mp3" id="10_p4u0t"]
 
 [node name="LevelManager" type="Node2D"]
 process_mode = 1
@@ -33,3 +36,12 @@ position = Vector2(400, 0)
 [node name="LevelPreview" parent="." instance=ExtResource("7_jlkfn")]
 z_index = 99
 scale = Vector2(0.3, 0.3)
+
+[node name="RotateLeft" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_jdd1i")
+
+[node name="RotateRight" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("9_akqw0")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("10_p4u0t")

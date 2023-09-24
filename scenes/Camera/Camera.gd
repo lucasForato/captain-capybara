@@ -25,6 +25,7 @@ func _ready():
 func _input(event: InputEvent):
 	if event.is_action_pressed("turn_left"):
 		rotate(1.5708)
+		self.get_parent().get_children()[2].play()
 		if camera_orientation == 0:
 			camera_orientation = 3
 		else:
@@ -33,6 +34,7 @@ func _input(event: InputEvent):
 		
 	if event.is_action_pressed("turn_right"):
 		rotate(-1.5708)		
+		self.get_parent().get_children()[3].play()
 		if camera_orientation == 3:
 			camera_orientation = 0
 		else:
