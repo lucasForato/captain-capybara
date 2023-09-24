@@ -1,8 +1,7 @@
-[gd_scene load_steps=9 format=3 uid="uid://cwcsie0ucsoe"]
+[gd_scene load_steps=7 format=3 uid="uid://cwcsie0ucsoe"]
 
 [ext_resource type="Texture2D" uid="uid://2jqwuxgge5wk" path="res://art/blocks/floor_block.png" id="1_8v5vr"]
 [ext_resource type="Script" path="res://scenes/Grid/Grid.gd" id="1_vbhhc"]
-[ext_resource type="Texture2D" uid="uid://b2ppgkak30p7c" path="res://art/bg/bg.png" id="2_v037g"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_bbqlf"]
 texture = ExtResource("1_8v5vr")
@@ -18,17 +17,10 @@ texture = SubResource("CompressedTexture2D_n3s6r")
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:0/0/physics_layer_0/angular_velocity = 0.0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_33xu3"]
-texture = ExtResource("2_v037g")
-0:0/0 = 0
-0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
-0:0/0/physics_layer_0/angular_velocity = 0.0
-
 [sub_resource type="TileSet" id="TileSet_waxov"]
 physics_layer_0/collision_layer = 2
 sources/0 = SubResource("TileSetAtlasSource_bbqlf")
 sources/1 = SubResource("TileSetAtlasSource_d8coe")
-sources/2 = SubResource("TileSetAtlasSource_33xu3")
 
 [node name="Grid" type="TileMap"]
 tile_set = SubResource("TileSet_waxov")
