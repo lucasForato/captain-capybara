@@ -43,6 +43,7 @@ func _process(delta):
 	
 func _timeout():
 	cur_time -= 1
+	self.get_children()[3].play()
 	if cur_time <= 0:
 		timer.stop()
 		cur_grid.restart()
