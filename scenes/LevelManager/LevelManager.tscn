@@ -20,7 +20,7 @@ script = ExtResource("1_uewfo")
 ignore_rotation = false
 
 [node name="LevelOne" parent="Camera" instance=ExtResource("3_tmtl2")]
-position = Vector2(16, -8)
+position = Vector2(208, 192)
 
 [node name="LevelTwo" parent="Camera" instance=ExtResource("4_17vl5")]
 position = Vector2(208, 1)
