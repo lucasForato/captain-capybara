@@ -1,13 +1,15 @@
-[gd_scene load_steps=3 format=3 uid="uid://c3jc76qxd78qj"]
+[gd_scene load_steps=4 format=3 uid="uid://c3jc76qxd78qj"]
 
 [ext_resource type="PackedScene" uid="uid://dai3rm5re17il" path="res://scenes/LevelManager/LevelManager.tscn" id="1_g07fu"]
-[ext_resource type="AudioStream" path="res://sound/BGM/Captain Capybara Theme Idea Epic.mp3" id="2_f4s2i"]
+[ext_resource type="Script" path="res://scenes/Main/Main.gd" id="1_wiyqw"]
+[ext_resource type="AudioStream" uid="uid://b7cis1nbac8xc" path="res://sound/BGM/Level BGM v2.wav" id="2_r4lv0"]
 
 [node name="Main" type="Node2D"]
 position = Vector2(33, -14)
+script = ExtResource("1_wiyqw")
 
 [node name="LevelManager" parent="." instance=ExtResource("1_g07fu")]
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("2_f4s2i")
+stream = ExtResource("2_r4lv0")
 autoplay = true
