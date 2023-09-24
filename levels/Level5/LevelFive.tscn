@@ -3,8 +3,8 @@
 [ext_resource type="PackedScene" uid="uid://cwcsie0ucsoe" path="res://scenes/Grid/Grid.tscn" id="1_bh23a"]
 [ext_resource type="PackedScene" uid="uid://dt8trl1rm2rev" path="res://scenes/Wall/Wall.tscn" id="2_wn35p"]
 [ext_resource type="PackedScene" uid="uid://5715rk80ob1j" path="res://scenes/Exit/Exit.tscn" id="3_ip54x"]
-[ext_resource type="PackedScene" uid="uid://b0l40saiq4kxp" path="res://scenes/Crate/Crate.tscn" id="4_0flcf"]
 [ext_resource type="PackedScene" uid="uid://j3rbfgoj6oi7" path="res://scenes/CrackedWall/CrackedWall.tscn" id="5_aqhyc"]
+[ext_resource type="PackedScene" uid="uid://il3tijkbfr2" path="res://scenes/Bomb/Bomb.tscn" id="6_7cyat"]
 [ext_resource type="PackedScene" uid="uid://807eo0o5qysf" path="res://scenes/Player/Player.tscn" id="6_rkut0"]
 
 [node name="LevelFive" type="Node2D"]
@@ -218,18 +218,6 @@ position = Vector2(80, 96)
 [node name="Exit" parent="Grid" instance=ExtResource("3_ip54x")]
 position = Vector2(-64, 80)
 
-[node name="Crate" parent="Grid" instance=ExtResource("4_0flcf")]
-position = Vector2(-48, -48)
-
-[node name="Crate2" parent="Grid" instance=ExtResource("4_0flcf")]
-position = Vector2(-48, -48)
-
-[node name="Crate4" parent="Grid" instance=ExtResource("4_0flcf")]
-position = Vector2(48, -49)
-
-[node name="Crate3" parent="Grid" instance=ExtResource("4_0flcf")]
-position = Vector2(16, 32)
-
 [node name="CrackedWall" parent="Grid" instance=ExtResource("5_aqhyc")]
 position = Vector2(-32, 16)
 
@@ -256,3 +244,12 @@ position = Vector2(64, 64)
 
 [node name="Player" parent="Grid" instance=ExtResource("6_rkut0")]
 position = Vector2(48, -16)
+
+[node name="Bomb" parent="Grid" instance=ExtResource("6_7cyat")]
+position = Vector2(-48, -48)
+
+[node name="Bomb2" parent="Grid" instance=ExtResource("6_7cyat")]
+position = Vector2(16, 32)
+
+[node name="Bomb3" parent="Grid" instance=ExtResource("6_7cyat")]
+position = Vector2(48, -48)
