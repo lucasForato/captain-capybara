@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://dai3rm5re17il"]
+[gd_scene load_steps=9 format=3 uid="uid://dai3rm5re17il"]
 
 [ext_resource type="Script" path="res://scenes/LevelManager/LevelManager.gd" id="1_uewfo"]
 [ext_resource type="PackedScene" uid="uid://cb6e0f3g7euiy" path="res://scenes/Camera/Camera.tscn" id="2_odalr"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://vss1udp158if" path="res://levels/Level2/LevelTwo.tscn" id="4_17vl5"]
 [ext_resource type="PackedScene" uid="uid://c5qk5riuqngeu" path="res://levels/Level3/LevelThree.tscn" id="5_5vykp"]
 [ext_resource type="PackedScene" uid="uid://ds4wmoouv31ea" path="res://levels/Level4/LevelFour.tscn" id="6_cn7dv"]
+[ext_resource type="PackedScene" uid="uid://l5ogcwfx8g2e" path="res://levels/Level5/LevelFive.tscn" id="7_0e0ya"]
 [ext_resource type="PackedScene" uid="uid://cyvnbqvimfk4b" path="res://scenes/Preview/LevelPreview.tscn" id="7_jlkfn"]
 
 [node name="LevelManager" type="Node2D"]
@@ -15,9 +16,6 @@ script = ExtResource("1_uewfo")
 [node name="Camera" parent="." instance=ExtResource("2_odalr")]
 ignore_rotation = false
 
-[node name="LevelFour" parent="Camera" instance=ExtResource("6_cn7dv")]
-position = Vector2(400, 0)
-
 [node name="LevelOne" parent="Camera" instance=ExtResource("3_tmtl2")]
 position = Vector2(16, -8)
 
@@ -26,6 +24,11 @@ position = Vector2(208, 1)
 
 [node name="LevelThree" parent="Camera" instance=ExtResource("5_5vykp")]
 position = Vector2(16, 192)
+
+[node name="LevelFour" parent="Camera" instance=ExtResource("6_cn7dv")]
+position = Vector2(400, 0)
+
+[node name="LevelFive" parent="Camera" instance=ExtResource("7_0e0ya")]
 
 [node name="LevelPreview" parent="." instance=ExtResource("7_jlkfn")]
 z_index = 99

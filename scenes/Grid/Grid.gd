@@ -67,6 +67,10 @@ func request_move(pawn, direction) -> bool:
 	var target_position = self.get_target_position(pawn.position, direction)
 	var type = self.get_cell_type_by_position(target_position, 1)
 	
+	if type == CELL_TYPE.GATE:
+		if pawn.type == CELL_TYPE.PLAYER:
+			return true
+		return false
 	if type == -1: 
 		return true
 	if type == CELL_TYPE.WALL:
