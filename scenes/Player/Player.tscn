@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://scenes/Player/Player.gd" id="1_nwd2d"]
 [ext_resource type="Texture2D" uid="uid://dmu2v1cu1e64b" path="res://art/player/player.png" id="2_r2o5a"]
-[ext_resource type="AudioStream" uid="uid://bk871bgsegg6e" path="res://sound/SFX/Capybara Moves 3.wav" id="3_84ho6"]
+[ext_resource type="AudioStream" uid="uid://bdcx0n0clqyog" path="res://sound/SFX/Capybara Moves 3.wav" id="3_84ho6"]
 
 [node name="Player" type="Node2D"]
 script = ExtResource("1_nwd2d")
