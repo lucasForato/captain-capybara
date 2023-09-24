@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://vss1udp158if" path="res://levels/Level2/LevelTwo.tscn" id="4_17vl5"]
 [ext_resource type="PackedScene" uid="uid://c5qk5riuqngeu" path="res://levels/Level3/LevelThree.tscn" id="5_5vykp"]
 [ext_resource type="PackedScene" uid="uid://ds4wmoouv31ea" path="res://levels/Level4/LevelFour.tscn" id="6_cn7dv"]
+[ext_resource type="PackedScene" uid="uid://l5ogcwfx8g2e" path="res://levels/Level5/LevelFive.tscn" id="7_0e0ya"]
 [ext_resource type="PackedScene" uid="uid://cyvnbqvimfk4b" path="res://scenes/Preview/LevelPreview.tscn" id="7_jlkfn"]
 [ext_resource type="AudioStream" uid="uid://dn1fvcvh7vs6" path="res://sound/SFX/Screen Rotate verA.wav" id="8_jdd1i"]
 [ext_resource type="AudioStream" uid="uid://cmlhrh3paonu" path="res://sound/SFX/Screen_Rotate_verB.wav" id="9_akqw0"]
@@ -18,9 +19,6 @@ script = ExtResource("1_uewfo")
 [node name="Camera" parent="." instance=ExtResource("2_odalr")]
 ignore_rotation = false
 
-[node name="LevelFour" parent="Camera" instance=ExtResource("6_cn7dv")]
-position = Vector2(400, 0)
-
 [node name="LevelOne" parent="Camera" instance=ExtResource("3_tmtl2")]
 position = Vector2(16, -8)
 
@@ -29,6 +27,11 @@ position = Vector2(208, 1)
 
 [node name="LevelThree" parent="Camera" instance=ExtResource("5_5vykp")]
 position = Vector2(16, 192)
+
+[node name="LevelFour" parent="Camera" instance=ExtResource("6_cn7dv")]
+position = Vector2(400, 0)
+
+[node name="LevelFive" parent="Camera" instance=ExtResource("7_0e0ya")]
 
 [node name="LevelPreview" parent="." instance=ExtResource("7_jlkfn")]
 z_index = 99

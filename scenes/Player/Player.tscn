@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://807eo0o5qysf"]
+[gd_scene load_steps=3 format=3 uid="uid://807eo0o5qysf"]
 
 [ext_resource type="Script" path="res://scenes/Player/Player.gd" id="1_nwd2d"]
 [ext_resource type="Texture2D" uid="uid://dmu2v1cu1e64b" path="res://art/player/player.png" id="2_r2o5a"]
@@ -7,11 +7,7 @@
 [node name="Player" type="Node2D"]
 script = ExtResource("1_nwd2d")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-z_index = 2
+[node name="Player" type="Sprite2D" parent="."]
 texture_filter = 1
 position = Vector2(8, 8)
 texture = ExtResource("2_r2o5a")
-
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("3_84ho6")
