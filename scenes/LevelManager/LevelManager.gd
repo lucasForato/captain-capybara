@@ -33,6 +33,7 @@ func start_level():
 	countdown.start(level, grid)
 
 func next_level():
+	self.get_children()[4].play()
 	camera.reset()
 	var level = levels[visible_level]
 	level.queue_free()
